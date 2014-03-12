@@ -52,6 +52,7 @@
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/icons \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/scripts \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/styles \
+/Users/mccraveiro/uofbank/platforms/android/assets/www/assets/vendor \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/font-awesome/css \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/font-awesome/fonts \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/font-awesome/less \
@@ -111,8 +112,12 @@
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/icons/icon72.png \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/icons/icon96.png \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/scripts/angular.min.js \
+/Users/mccraveiro/uofbank/platforms/android/assets/www/assets/scripts/index.js \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/styles/index.css \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/assets/styles/roboto.css \
+/Users/mccraveiro/uofbank/platforms/android/assets/www/assets/vendor/swiper \
+/Users/mccraveiro/uofbank/platforms/android/assets/www/assets/vendor/swiper/idangerous.swiper.css \
+/Users/mccraveiro/uofbank/platforms/android/assets/www/assets/vendor/swiper/idangerous.swiper.js \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/plugins/org.apache.cordova.file \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/plugins/org.apache.cordova.inappbrowser \
 /Users/mccraveiro/uofbank/platforms/android/assets/www/plugins/org.apache.cordova.keyboard \

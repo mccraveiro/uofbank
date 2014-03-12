@@ -41,8 +41,9 @@ header h1 {
     box-shadow: 0 1px 2px #aaa;
     height: 30vh;
     margin: 2vh 3vw;
-    position:relative;
+    position: relative;
     padding: 5vh 8vw;
+    width: 94vw;
     z-index: 2;
 
     -webkit-animation: fly-in-from-left .5s 1s ease both;

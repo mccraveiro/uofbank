@@ -4,32 +4,50 @@
         <title>UofBank</title>
         <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css" type="text/css" />
         <link rel="stylesheet" href="assets/styles/roboto.css" type="text/css" />
+        <link rel="stylesheet" href="assets/vendor/swiper/idangerous.swiper.css" type="text/css" />
+
         <link rel="stylesheet" href="assets/styles/index.css" type="text/css" />
+
+        <script type="text/javascript" src="assets/vendor/swiper/idangerous.swiper.js"></script>
         <script type="text/javascript" src="assets/scripts/angular.min.js"></script>
+        <script type="text/javascript" src="assets/scripts/index.js"></script>
     </head>
     <body>
         <header>
             <h1>UofBank</h1>
         </header>
 
-        <section class="card">
-            <h1><strong>Checking</strong> Balance</h1>
-            <h2 class="balance">$ 123.45</h2>
-        </section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--First Slide-->
+                <section class="card swiper-slide">
+                    <h1><strong>Checking</strong> Balance</h1>
+                    <h2 class="balance">$ 123.45</h2>
+                </section>
 
-        <!--
-        <section class="card">
-            <h1><strong>Savings</strong> Balance</h1>
-            <h2 class="balance">$ 987.65</h2>
-        </section>
-        -->
+                <!--Second Slide-->
+                <section class="card swiper-slide">
+                    <h1><strong>Savings</strong> Balance</h1>
+                    <h2 class="balance">$ 987.65</h2>
+                </section>
+            </div>
+        </div>
 
-        <a href="tel:16478706640">
-        <section class="card">
-            <h1><strong>Call</strong> UofBank</h1>
-            <h2>+1 647 870 6640</h2>
-        </section>
-        </a>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <!--First Slide-->
+                <section class="card swiper-slide">
+                    <h1>Pay <strong>Visa</strong></h1>
+                    <h2>in 3 days</h2>
+                </section>
+
+                <!--Second Slide-->
+                <section class="card swiper-slide">
+                    <h1>Pay <strong>Water</strong> Bill</h1>
+                    <h2>in 5 days</h2>
+                </section>
+            </div>
+        </div>
 
         <section class="card nav">
             <div class="btn">

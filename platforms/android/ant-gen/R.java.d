@@ -1,4 +1,4 @@
-/Users/mccraveiro/uofbank/platforms/android/ant-gen/com/your/company/HelloWorld/R.java \
+/Users/mccraveiro/uofbank/platforms/android/ant-gen/com/universityoftoronto/uofbank/R.java \
  : /Users/mccraveiro/uofbank/platforms/android/res/drawable/icon.png \
 /Users/mccraveiro/uofbank/platforms/android/res/drawable-hdpi/ic_action_next_item.png \
 /Users/mccraveiro/uofbank/platforms/android/res/drawable-hdpi/ic_action_previous_item.png \

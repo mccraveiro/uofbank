@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Hello, Mobile!</title>
-    <link rel="stylesheet" href="index.css" type="text/css" />
-  </head>
-  <body>
-    <img src="assets/chrome_logo.png" />
-    <h1>Hello, Mobile!</h1>
-  </body>
+    <head>
+        <title>UofBank</title>
+        <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.css" type="text/css" />
+        <link rel="stylesheet" href="assets/styles/roboto.css" type="text/css" />
+        <link rel="stylesheet" href="assets/styles/index.css" type="text/css" />
+        <script type="text/javascript" src="assets/scripts/angular.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <h1>UofBank</h1>
+        </header>
+
+        <section class="card">
+            <h1><strong>Checking</strong> Balance</h1>
+            <h2 class="balance">$ 123.45</h2>
+        </section>
+
+        <!--
+        <section class="card">
+            <h1><strong>Savings</strong> Balance</h1>
+            <h2 class="balance">$ 987.65</h2>
+        </section>
+        -->
+
+        <a href="tel:16478706640">
+        <section class="card">
+            <h1><strong>Call</strong> UofBank</h1>
+            <h2>+1 647 870 6640</h2>
+        </section>
+        </a>
+
+        <section class="card nav">
+            <div class="btn">
+                <i class="fa fa-barcode"></i>
+                <h3>Bills</h3>
+            </div>
+            <div class="btn">
+                <i class="fa fa-exchange"></i>
+                <h3>Transfers</h3>
+            </div>
+            <div class="btn">
+                <i class="fa fa-gear"></i>
+                <h3>Settings</h3>
+            </div>
+        </section>
+    </body>
 </html>

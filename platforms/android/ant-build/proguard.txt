@@ -1,3 +1,3 @@
 # view AndroidManifest.xml #generated:6
--keep class com.your.company.HelloWorld.HelloWorld { <init>(...); }
+-keep class com.universityoftoronto.uofbank.HelloWorld { <init>(...); }
 

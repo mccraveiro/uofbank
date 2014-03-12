@@ -1,4 +1,11 @@
 /Users/mccraveiro/uofbank/platforms/android/ant-build/classes.dex : \
+/Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/universityoftoronto/uofbank/BuildConfig.class \
+/Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/universityoftoronto/uofbank/HelloWorld.class \
+/Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/universityoftoronto/uofbank/R$attr.class \
+/Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/universityoftoronto/uofbank/R$drawable.class \
+/Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/universityoftoronto/uofbank/R$string.class \
+/Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/universityoftoronto/uofbank/R$xml.class \
+/Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/universityoftoronto/uofbank/R.class \
 /Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/your/company/HelloWorld/BuildConfig.class \
 /Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/your/company/HelloWorld/HelloWorld.class \
 /Users/mccraveiro/uofbank/platforms/android/ant-build/classes/com/your/company/HelloWorld/R$attr.class \

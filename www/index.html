@@ -13,55 +13,71 @@
         <script type="text/javascript" src="assets/scripts/index.js"></script>
     </head>
     <body>
-        <header>
+        <div class="panel login">
+
             <h1>UofBank</h1>
-        </header>
 
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!--First Slide-->
-                <section class="card swiper-slide">
-                    <h1><strong>Checking</strong> Balance</h1>
-                    <h2 class="balance">$ 123.45</h2>
-                </section>
+            <label>Account Number</label>
+            <input type="text">
+            <label>
+                <input type="checkbox">
+                Save
+            </label>
 
-                <!--Second Slide-->
-                <section class="card swiper-slide">
-                    <h1><strong>Savings</strong> Balance</h1>
-                    <h2 class="balance">$ 987.65</h2>
-                </section>
-            </div>
+            <button>Sign In</button>
+
         </div>
+        <div class="panel">
+            <header>
+                <h1>UofBank</h1>
+            </header>
 
-        <div class="swiper-container">
-            <div class="swiper-wrapper">
-                <!--First Slide-->
-                <section class="card swiper-slide">
-                    <h1>Pay <strong>Visa</strong></h1>
-                    <h2>in 3 days</h2>
-                </section>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!--First Slide-->
+                    <section class="card swiper-slide">
+                        <h1>Checking Balance</h1>
+                        <h2 class="balance">$ 123.45</h2>
+                    </section>
 
-                <!--Second Slide-->
-                <section class="card swiper-slide">
-                    <h1>Pay <strong>Water</strong> Bill</h1>
-                    <h2>in 5 days</h2>
-                </section>
+                    <!--Second Slide-->
+                    <section class="card swiper-slide">
+                        <h1>Savings Balance</h1>
+                        <h2 class="balance">$ 987.65</h2>
+                    </section>
+                </div>
             </div>
+
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <!--First Slide-->
+                    <section class="card swiper-slide">
+                        <h1>Pay Visa</h1>
+                        <h2>in 3 days</h2>
+                    </section>
+
+                    <!--Second Slide-->
+                    <section class="card swiper-slide">
+                        <h1>Pay Water Bill</h1>
+                        <h2>in 5 days</h2>
+                    </section>
+                </div>
+            </div>
+
+            <section class="nav">
+                <div class="btn">
+                    <i class="fa fa-barcode"></i>
+                    <h3>Bills</h3>
+                </div>
+                <div class="btn">
+                    <i class="fa fa-exchange"></i>
+                    <h3>Transfers</h3>
+                </div>
+                <div class="btn">
+                    <i class="fa fa-gear"></i>
+                    <h3>Settings</h3>
+                </div>
+            </section>
         </div>
-
-        <section class="card nav">
-            <div class="btn">
-                <i class="fa fa-barcode"></i>
-                <h3>Bills</h3>
-            </div>
-            <div class="btn">
-                <i class="fa fa-exchange"></i>
-                <h3>Transfers</h3>
-            </div>
-            <div class="btn">
-                <i class="fa fa-gear"></i>
-                <h3>Settings</h3>
-            </div>
-        </section>
     </body>
 </html>

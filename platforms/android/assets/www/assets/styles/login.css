@@ -1,0 +1,21 @@
+.panel.login h1,
+.panel.login label,
+.panel.login input[type="text"] {
+  display: block;
+  margin: 0 10%;
+  width: 80%;
+}
+.panel.login h1 {
+  font-size: 40pt;
+  margin-bottom: 60pt;
+}
+.panel.login input[type="text"] {
+  height: 26pt;
+  margin: 8pt auto 4pt;
+}
+.panel.login button {
+  display: block;
+  height: 26pt;
+  margin: 90pt auto 10pt;
+  width: 20%;
+}

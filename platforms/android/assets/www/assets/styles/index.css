@@ -16,6 +16,9 @@ h1 {
   font-size: 2rem;
   font-weight: 200;
 }
+.view {
+  height: 100%;
+}
 .panel {
   background-color: #ccc;
   box-sizing: border-box;
@@ -99,8 +102,9 @@ header h1 {
   vertical-align: middle;
   width: 32vw;
 }
-.nav .btn+.btn,
-.nav .btn border-left: 1px solid #888,
+.nav .btn+.btn {
+  border-left: 1px solid #888;
+}
 .nav .btn i {
   color: #fff;
   display: inline-block;

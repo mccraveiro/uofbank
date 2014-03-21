@@ -1,0 +1,103 @@
+.pin {
+  height: 90vh;
+  width: 90vw;
+  margin: 5vh 5vw;
+  background-color: #fff;
+  border-radius: 5px;
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 5vh 0;
+  top: 110%;
+  transition: top 0.3s ease-in-out;
+}
+.pin.show {
+  top: 0%;
+}
+.pin .pin-value {
+  height: 20vh;
+  width: 90vw;
+  color: #666;
+  line-height: 20vh;
+  font-size: 3vh;
+  vertical-align: middle;
+  text-align: center;
+  letter-spacing: 2pt;
+}
+.pin .pin-keyboard-row {
+  height: 15vh;
+  width: 90vw;
+  text-align: center;
+}
+.pin .pin-keyboard-row .pin-keyboard-key {
+  display: inline-block;
+  height: 15vh;
+  width: 15vh;
+  line-height: 15vh;
+  font-size: 7vh;
+  font-weight: 300;
+  vertical-align: middle;
+  text-align: center;
+  color: #666;
+  border-radius: 15vh;
+}
+.pin .pin-keyboard-row .pin-keyboard-key.clicked {
+  background-color: #666;
+  color: #fff;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-name: fadeout;
+}
+@-moz-keyframes fadeout {
+  0% {
+    background-color: #666;
+    color: #fff;
+  }
+
+  100% {
+    background-color: #fff;
+    color: #666;
+  }
+}
+@-webkit-keyframes fadeout {
+  0% {
+    background-color: #666;
+    color: #fff;
+  }
+
+  100% {
+    background-color: #fff;
+    color: #666;
+  }
+}
+@-o-keyframes fadeout {
+  0% {
+    background-color: #666;
+    color: #fff;
+  }
+
+  100% {
+    background-color: #fff;
+    color: #666;
+  }
+}
+@-ms-keyframes fadeout {
+  0% {
+    background-color: #666;
+    color: #fff;
+  }
+
+  100% {
+    background-color: #fff;
+    color: #666;
+  }
+}
+@keyframes fadeout {
+  0% {
+    background-color: #666;
+    color: #fff;
+  }
+
+  100% {
+    background-color: #fff;
+    color: #666;
+  }
+}

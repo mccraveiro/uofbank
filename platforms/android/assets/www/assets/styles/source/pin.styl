@@ -1,0 +1,59 @@
+.pin
+    height: 90vh
+    width: 90vw
+    margin: 5vh 5vw
+    background-color: white
+    border-radius: 5px
+    box-sizing: border-box
+    overflow: hidden
+    padding: 5vh 0
+    top: 110%
+    transition: top .3s ease-in-out;
+
+    &.show
+        top: 0%
+
+    .pin-value
+        height: 20vh
+        width: 90vw
+        color: #666
+        line-height: 20vh
+        font-size: 3vh
+        vertical-align: middle
+        text-align: center
+        letter-spacing: 2pt
+
+    .pin-keyboard-row
+        height: 15vh
+        width: 90vw
+        text-align: center
+
+        .pin-keyboard-key
+            display: inline-block
+            height: 15vh
+            width: 15vh
+            line-height: 15vh
+            font-size: 7vh
+            font-weight: 300
+            vertical-align: middle
+            text-align: center
+            color: #666
+            border-radius: 15vh
+
+            &.clicked
+                background-color: #666
+                color: white
+                -webkit-animation-duration: 1s;
+                -webkit-animation-name: fadeout;
+
+@keyframes fadeout {
+    from {
+        background-color: #666
+        color: white
+    }
+
+    to {
+        background-color: white
+        color: #666
+    }
+}

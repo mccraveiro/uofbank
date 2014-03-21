@@ -6,10 +6,15 @@
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <!--First Slide-->
-            <section class="card swiper-slide">
+            <div ng-click="checkBalance()">
+                <section class="card swiper-slide" >
                 <h1>Checking Balance</h1>
                 <h2 class="balance">$ 123.45</h2>
-            </section>
+                </section>
+            </div>
+
+
+            
 
             <!--Second Slide-->
             <section class="card swiper-slide">
@@ -36,7 +41,7 @@
     </div>
 
     <section class="nav">
-        <div class="btn">
+        <div class="btn" ng-click="bill()">
             <i class="fa fa-barcode"></i>
             <h3>Bills</h3>
         </div>

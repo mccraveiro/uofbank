@@ -10,37 +10,61 @@ window.onload = function() {
     });
 }
 
-var app = angular.module('uofbank', ['ngRoute']);
+var app = angular.module('uofbank', []);
 
-// configure our routes
-app.config(function($routeProvider, $locationProvider) {
+app.run(function ($rootScope, $location) {
 
-    $routeProvider
-		// route for the login page
-		.when('/', {
-			templateUrl : 'assets/pages/login.html',
-			controller  : 'loginController'
-		})
-		// route for the main page
-		.when('/main', {
-			templateUrl : 'assets/pages/main.html',
-			controller  : 'mainController'
-		})
-        .otherwise({
-            redirectTo: '/'
-        });
+    $rootScope.Pages = (function () {
 
-    $locationProvider.hashPrefix('!');
+        var currentPage;
+        var _pages = {
+            login: false,
+            main: false
+        };
+
+        return {
+
+            current: function () {
+                return currentPage;
+            },
+
+            go: function (page) {
+
+                // Page does not exist
+                if (typeof _pages[page] == 'undefined') {
+                    return;
+                }
+
+                // Toggle current page
+                if (currentPage) {
+                    _pages[currentPage] = false;
+                }
+
+                // Set new page
+                _pages[page] = true;
+                currentPage = page;
+
+                console.log('Current page: ' + page);
+            }
+        };
+    })();
+
+    // Show Login
+    $rootScope.Pages.go('login');
 });
 
-app.controller('loginController', function ($scope, $location) {
+app.controller('loginController', function ($scope, $rootScope) {
+
+    console.log($rootScope.Pages.current());
+    console.log("HEY LOGIN");
 
     $scope.signIn = function() {
-        $location.path('/main');
+        $rootScope.Pages.go('main');
     };
 
 });
 
-app.controller('mainController', function($scope) {
+app.controller('mainController', function ($scope, $rootScope) {
 
+    console.log("HEY MAN");
 });

@@ -22,7 +22,9 @@ app.run(function ($rootScope, $location) {
         var nextPage;
         var _pages = {
             login: false,
-            main: false
+            main: false,
+            transfer: false,
+            transferForm: false
         };
         var pinVisible = false;
 
@@ -93,4 +95,27 @@ app.controller('loginController', function ($scope, $rootScope) {
 app.controller('mainController', function ($scope, $rootScope) {
 
     console.log("HEY MAN");
+
+    $scope.transfer = function() {
+        $rootScope.Pages.go('transfer');
+    };
+});
+
+
+app.controller('transferController', function ($scope, $rootScope) {
+
+    console.log("HEY MAN");
+
+    $scope.transferForm = function() {
+        $rootScope.Pages.go('transferForm');
+    };
+});
+
+app.controller('transferFormController', function ($scope, $rootScope) {
+
+    console.log("HEY MAN");
+
+    $scope.transfer = function() {
+        $rootScope.Pages.go('transfer');
+    };
 });

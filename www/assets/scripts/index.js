@@ -1,22 +1,25 @@
 window.onload = function() {
+    // FIXME Swiper not working
     var mySwiper = new Swiper('.swiper-container:nth-of-type(1)', {
         mode:'horizontal',
         loop: false
     });
-
     var mySwiper = new Swiper('.swiper-container:nth-of-type(2)', {
         mode:'horizontal',
         loop: false
     });
 }
 
-var app = angular.module('uofbank', []);
+var app = angular.module('uofbank', [
+    'uofbank.pin'
+]);
 
 app.run(function ($rootScope, $location) {
 
     $rootScope.Pages = (function () {
 
         var currentPage;
+        var nextPage;
         var _pages = {
             login: false,
             main: false,
@@ -24,6 +27,7 @@ app.run(function ($rootScope, $location) {
             transferForm: false,
             checkBalance: false
         };
+        var pinVisible = false;
 
         return {
 
@@ -48,6 +52,28 @@ app.run(function ($rootScope, $location) {
                 currentPage = page;
 
                 console.log('Current page: ' + page);
+            },
+
+            togglePin: function (next) {
+
+                if (pinVisible) {
+                    pinVisible = false;
+
+                    if (nextPage) {
+                        $rootScope.Pages.go(nextPage);
+                        nextPage = undefined;
+                    }
+                } else {
+                    pinVisible = true;
+
+                    if (next) {
+                        nextPage = next;
+                    }
+                }
+            },
+
+            isPinVisible: function () {
+                return pinVisible;
             }
         };
     })();
@@ -62,7 +88,7 @@ app.controller('loginController', function ($scope, $rootScope) {
     console.log("HEY LOGIN");
 
     $scope.signIn = function() {
-        $rootScope.Pages.go('main');
+        $rootScope.Pages.togglePin('main');
     };
 
 });
@@ -99,8 +125,10 @@ app.controller('transferFormController', function ($scope, $rootScope) {
     };
 });
 
+
 app.controller('checkBalanceController', function ($scope, $rootScope) {
 
     console.log("HEY MAN");
 
 });
+

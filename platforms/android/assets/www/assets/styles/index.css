@@ -19,6 +19,10 @@ h1 {
 .view {
   height: 100%;
 }
+.overlay {
+  position: absolute;
+  z-index: 9999;
+}
 .panel {
   background-color: #ccc;
   box-sizing: border-box;

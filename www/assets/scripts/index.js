@@ -21,7 +21,8 @@ app.run(function ($rootScope, $location) {
             login: false,
             main: false,
             transfer: false,
-            transferForm: false
+            transferForm: false,
+            checkBalance: false
         };
 
         return {
@@ -73,6 +74,10 @@ app.controller('mainController', function ($scope, $rootScope) {
     $scope.transfer = function() {
         $rootScope.Pages.go('transfer');
     };
+
+    $scope.transfer = checkBalance() {
+        $rootScope.Pages.go('checkBalance');
+    };
 });
 
 
@@ -92,4 +97,10 @@ app.controller('transferFormController', function ($scope, $rootScope) {
     $scope.transfer = function() {
         $rootScope.Pages.go('transfer');
     };
+});
+
+app.controller('checkBalanceController', function ($scope, $rootScope) {
+
+    console.log("HEY MAN");
+
 });

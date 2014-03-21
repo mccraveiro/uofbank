@@ -24,8 +24,7 @@ app.run(function ($rootScope, $location) {
             login: false,
             main: false,
             transfer: false,
-            transferForm: false,
-            checkBalance: false
+            transferForm: false
         };
         var pinVisible = false;
 
@@ -100,10 +99,6 @@ app.controller('mainController', function ($scope, $rootScope) {
     $scope.transfer = function() {
         $rootScope.Pages.go('transfer');
     };
-
-    $scope.transfer = checkBalance() {
-        $rootScope.Pages.go('checkBalance');
-    };
 });
 
 
@@ -124,11 +119,3 @@ app.controller('transferFormController', function ($scope, $rootScope) {
         $rootScope.Pages.go('transfer');
     };
 });
-
-
-app.controller('checkBalanceController', function ($scope, $rootScope) {
-
-    console.log("HEY MAN");
-
-});
-

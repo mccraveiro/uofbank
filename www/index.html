@@ -9,7 +9,9 @@
         <link rel="stylesheet" href="assets/styles/angular-csp.css" type="text/css" />
         <link rel="stylesheet" href="assets/styles/index.css" type="text/css" />
         <link rel="stylesheet" href="assets/styles/login.css" type="text/css" />
+        <link rel="stylesheet" href="assets/styles/source/transferForm.css" type="text/css" />
 
+        <script type="text/javascript" src="assets/scripts/jquery-2.1.0.js"></script>
         <script type="text/javascript" src="assets/vendor/swiper/idangerous.swiper.js"></script>
         <script type="text/javascript" src="assets/scripts/angular.min.js"></script>
         <script type="text/javascript" src="assets/scripts/index.js"></script>
@@ -17,5 +19,7 @@
     <body ng-app="uofbank" ng-csp>
         <ng-include src="'assets/pages/login.html'" class="view" ng-show="Pages.current() == 'login'"></ng-include>
         <ng-include src="'assets/pages/main.html'" class="view" ng-show="Pages.current() == 'main'"></ng-include>
+        <ng-include src="'assets/pages/transfer.html'" class="view" ng-show="Pages.current() == 'transfer'"></ng-include>
+        <ng-include src="'assets/pages/transferForm.html'" class="view" ng-show="Pages.current() == 'transferForm'"></ng-include>
     </body>
 </html>

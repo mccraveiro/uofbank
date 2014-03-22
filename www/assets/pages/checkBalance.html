@@ -14,34 +14,78 @@
     </div>
 
     <div>
-        <select class="selectMonth">
-            <option value="current" id="1">Current Period</option>
-            <option value="jan" id="2">January 2014</option>
-            <option value="feb" id="3">February 2014</option>
-            <option value="dec" id="4">December 2013</option>
+        <select id="monthSelector">
+            <option value="current">Current Period</option>
+            <option value="jan">January 2014</option>
+            <option value="feb">February 2014</option>
+            <option value="dec">December 2013</option>
         </select>
     </div>
 
     <div class="transactions">
-        <center>
-            <div>    
+        <div id="current" class="month" style="display:none">
+             <div>    
                 <p>McDonalds $10.00</p>
                 <a>13/03/2014</a>
             </div>
-            <br>
+            
             <div>
                 <p>Subway $15.00</p>            
                 <a>08/03/2014</a>
             </div>
-            <br>
+            
             <div>
                 <p>Walmart $78.32</p>            
                 <a>02/03/2014</a>
             </div>
-        </center>
-        
+        </div>
 
-    </div>
+        <div id="jan" class="month" style="display:none">
+             <div>    
+                <p>Mr. Sub $10.00</p>
+                <a>20/01/2014</a>
+            </div>
+            
+            <div>
+                <p>EB Games $450.00</p>            
+                <a>13/01/2014</a>
+            </div>
+            
+            <div>
+                <p>noFrios $132.51</p>            
+                <a>02/01/2014</a>
+            </div>
+        </div>
+
+        <div id="feb" class="month" style="display:none">
+             <div>    
+                <p>Burger King $10.00</p>
+                <a>28/02/2014</a>
+            </div>
+            
+            <div>
+                <p>Canada Computers $98.00</p>            
+                <a>07/02/2014</a>
+            </div>
+            
+            <div>
+                <p>Metro $157.01</p>
+                <a>02/02/2014</a>
+            </div>
+        </div>
+
+        <div id="dec" class="month" style="display:none">
+             <div>    
+                <p>The Brunswick House $25.00</p>
+                <a>28/02/2014</a>
+            </div>
+            
+            <div>
+                <p>Home Hardware $28.00</p>            
+                <a>05/02/2014</a>
+            </div>
+        </div>
+    </div>  
 
     
     <button class="cbBtn" ng-click="mainPage()">Main Page</button>

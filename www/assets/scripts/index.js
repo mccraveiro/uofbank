@@ -8,6 +8,8 @@ window.onload = function() {
         mode:'horizontal',
         loop: false
     });
+
+
 }
 
 var app = angular.module('uofbank', [
@@ -86,6 +88,7 @@ app.run(function ($rootScope, $location) {
         };
     })();
 
+
     // Show Login
     $rootScope.Pages.go('login');
 });
@@ -115,7 +118,15 @@ app.controller('mainController', function ($scope, $rootScope) {
 
     $scope.checkBalance = function() {
         $rootScope.Pages.go('checkBalance');
+
+        $(function() {    
+            $('#monthSelector').change(function(){
+                $('.month').hide();
+                $('#' + $(this).val()).show();
+            });
+        });
     };
+
 });
 
 

@@ -29,16 +29,24 @@ h1 {
   box-sizing: border-box;
   height: 100%;
   padding: 12vh 0 0vh;
+  overflow-y: auto;
   position: relative;
   width: 100%;
+}
+.panel::-webkit-scrollbar {
+  width: 0 !important;
+}
+.panel.main {
+  padding-bottom: 12vh;
 }
 header {
   background-color: #333;
   color: #fff;
   height: 12vh;
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
+  z-index: 999;
 }
 header h1 {
   line-height: 12vh;
@@ -104,9 +112,9 @@ header i {
   box-sizing: border-box;
   height: 12vh !important;
   left: 0;
-  position: absolute;
+  position: fixed;
   width: 100vw;
-  z-index: 10;
+  z-index: 999;
 }
 .nav .btn {
   box-sizing: border-box;
@@ -118,24 +126,22 @@ header i {
   vertical-align: middle;
   width: 32vw;
 }
-.nav .btn+.btn {
-  border-left: 1px solid #888;
-}
 .nav .btn i {
+  height: 12vh;
   color: #fff;
   display: inline-block;
   font-size: 6vw;
   line-height: 12vh;
-  margin: 0 2vw;
+  margin: 0 1vw;
   vertical-align: middle;
 }
 .nav .btn h3 {
   color: #fff;
   display: inline-block;
   font-size: 4vw;
-  font-weight: 300;
+  font-weight: 700;
   line-height: 12vh;
-  margin: 2vh 0 0;
+  margin: 0;
   vertical-align: middle;
 }
 @-moz-keyframes fly-in-from-left {

@@ -2,39 +2,27 @@
 
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <!--First Slide-->
-            <div ng-click="checkBalance()">
-                <section class="card swiper-slide" >
-                <h1>Checking Balance</h1>
-                <h2 class="balance">$ 123.45</h2>
-                </section>
-            </div>
+    <!-- Balances -->
+    <section class="card" ng-click="checkBalance()">
+        <h1>Checking Balance</h1>
+        <h2 class="balance">$ 123.45</h2>
+    </section>
 
-            <!--Second Slide-->
-            <section class="card swiper-slide">
-                <h1>Savings Balance</h1>
-                <h2 class="balance">$ 987.65</h2>
-            </section>
-        </div>
-    </div>
+    <section class="card">
+        <h1>Savings Balance</h1>
+        <h2 class="balance">$ 987.65</h2>
+    </section>
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <!--First Slide-->
-            <section class="card swiper-slide">
-                <h1>Pay Visa</h1>
-                <h2>in 3 days</h2>
-            </section>
+    <!-- notifications -->
+    <section class="card">
+        <h1>Pay Visa</h1>
+        <h2>in 3 days</h2>
+    </section>
 
-            <!--Second Slide-->
-            <section class="card swiper-slide">
-                <h1>Pay Water Bill</h1>
-                <h2>in 5 days</h2>
-            </section>
-        </div>
-    </div>
+    <section class="card">
+        <h1>Pay Water Bill</h1>
+        <h2>in 5 days</h2>
+    </section>
 
     <section class="nav">
         <div class="btn" ng-click="bill()">

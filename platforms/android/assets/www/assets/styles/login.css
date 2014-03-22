@@ -1,17 +1,20 @@
-.panel.login h1,
-.panel.login label,
-.panel.login input[type="text"] {
+.panel.login .account-number-label {
   display: block;
-  margin: 0 10%;
-  width: 80%;
+  margin: 20vh auto 0;
+  width: 80vw;
+  text-align: left;
 }
-.panel.login h1 {
-  font-size: 40pt;
-  margin-bottom: 60pt;
+.panel.login .account-number-input {
+  display: block;
+  height: 7vh;
+  margin: 2vh auto 1vh;
+  width: 80vw;
 }
-.panel.login input[type="text"] {
-  height: 26pt;
-  margin: 8pt auto 4pt;
+.panel.login .save-label {
+  display: block;
+  margin: 0 auto;
+  width: 80vw;
+  text-align: left;
 }
 .panel.login button {
   display: block;

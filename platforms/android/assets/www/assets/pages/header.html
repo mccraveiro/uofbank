@@ -1,6 +1,6 @@
 <header ng-controller="headerController">
     <h1>UofBank</h1>
-    <i class="fa fa-sign-out" ng-click="signout()"></i>
+    <i class="fa fa-sign-out" ng-click="signout()" ng-hide="Pages.current() == 'login'"></i>
     <i class="fa fa-map-marker"></i>
     <a href="tel:6479991234">
         <i class="fa fa-phone" ng-click="call()"></i>

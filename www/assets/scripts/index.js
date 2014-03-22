@@ -140,6 +140,9 @@ app.controller('transferController', function ($scope, $rootScope) {
 
     $scope.transferForm = function() {
         $rootScope.Pages.go('transferForm');
+
+        var x = document.getElementById("val").value;
+        document.getElementById("value").innerHTML=x;
     };
 });
 

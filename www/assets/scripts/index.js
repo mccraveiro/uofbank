@@ -156,6 +156,15 @@ app.controller('billController', function ($scope, $rootScope) {
 
     $scope.billForm = function() {
         $rootScope.Pages.go('billForm');
+
+        var x = document.getElementById("payee").value;
+        document.getElementById("pay").innerHTML=x;
+
+        var y = document.getElementById("accnumber").value;
+        document.getElementById("accnum").innerHTML=y;
+
+        var z = document.getElementById("amount").value;
+        document.getElementById("amnt").innerHTML=z;
     };
 
 });
@@ -172,7 +181,6 @@ app.controller('billFormController', function ($scope, $rootScope) {
     $scope.pay = function() {
         $rootScope.Pages.togglePin('main');
     };
-
 });
 
 app.controller('checkBalanceController', function ($scope, $rootScope) {
@@ -183,3 +191,6 @@ app.controller('checkBalanceController', function ($scope, $rootScope) {
         $rootScope.Pages.go('main');
     };
 });
+
+
+

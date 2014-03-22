@@ -168,3 +168,12 @@ app.controller('billFormController', function ($scope, $rootScope) {
     };
 
 });
+
+app.controller('checkBalanceController', function ($scope, $rootScope) {
+
+    console.log("HEY MAN");
+
+    $scope.mainPage = function() {
+        $rootScope.Pages.go('main');
+    };
+});

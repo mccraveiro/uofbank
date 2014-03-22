@@ -3,25 +3,42 @@
         <h1>UofBank</h1>
     </header>
 
-    <h1>Bills</h1>
+    <center>
+        <h1>Bills</h1>
+    </center>
+    
 
-    <div>
-        <button ng-click="notification()">+ Notification</button>
-        <button ng-click="qrcode()">QRCode</button>
+    
+    <div class="topBtn">
+        <div>
+            <button ng-click="notification()">+ Notification</button>
+        </div>
+
+        <div>
+            <button ng-click="qrcode()">QRCode</button>
+        </div>            
     </div>
 
-    <div>
-        <a>Payee</a>
-        <input type="text">
+    <div class="billForm">
+        <p><h2>Payee</h2></p>
+        <p><input type="text"></p>
 
-        <a>Account Number</a>
-        <input type="text">
+        <p><h2>Account Number</h2></p>
+        <p><input type="text"></p>
 
-        <a>Amount</a>
-        <input type="text">
+        <p><h2>Amount</h2></p>
+        <p><input type="text"></p>
 
     </div>
        
-    <button ng-click="mainPage()">Main Page</button>
-    <button ng-click="billForm()">Pay</button>
+    <div class="billBtn">
+        <div>
+            <button class="btn" ng-click="mainPage()">Main Page</button>
+        </div>
+        
+        <div>
+            <button class="btn" ng-click="billForm()">Pay</button>
+        </div>
+    </div>   
+    
 </div>

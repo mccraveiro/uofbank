@@ -1,0 +1,39 @@
+.checkBalanceForm{
+	width: 100%;
+	height: 15%;
+	margin-left: 15%;
+	margin-top: 10%;
+}
+
+.selectMonth{
+	width: 90%;
+	height: 50px;
+	margin-left: 5%;
+}
+
+.cbBtn{
+	position: absolute;
+	bottom: 0;
+	margin-left: 35%;
+	margin-bottom: 5%;
+	width: 80px;
+	height: 50px;
+
+}
+
+.transactions{
+	width: 90%;
+	margin-left: 5%;	
+}
+
+div.transactions > div:nth-child(1){
+	width: 90%;
+	height: 65px;
+	margin-left: 5%;	
+}
+
+div.transactions > div:nth-child(2){
+	width: 90%;
+	height: 65px;
+	margin-left: 5%;	
+}

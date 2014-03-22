@@ -36,7 +36,7 @@ app.controller('pinController', function ($scope, $rootScope) {
         if ($scope.pin.length == 4) {
 
             if ($scope.pin === '1234') {
-                $rootScope.Pages.togglePin();
+                $rootScope.Pages.nextPage();
                 $scope.pin = '';
             } else {
                 $scope.pin = '';

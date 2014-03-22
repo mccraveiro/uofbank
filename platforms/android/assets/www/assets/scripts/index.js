@@ -57,15 +57,20 @@ app.run(function ($rootScope, $location) {
                 console.log('Current page: ' + page);
             },
 
+            nextPage: function () {
+
+                pinVisible = false;
+
+                if (nextPage) {
+                    $rootScope.Pages.go(nextPage);
+                    nextPage = undefined;
+                }
+            },
+
             togglePin: function (next) {
 
                 if (pinVisible) {
                     pinVisible = false;
-
-                    if (nextPage) {
-                        $rootScope.Pages.go(nextPage);
-                        nextPage = undefined;
-                    }
                 } else {
                     pinVisible = true;
 

@@ -1,24 +1,27 @@
-.panel.login .account-number-label {
-  display: block;
-  margin: 20vh auto 0;
+.account-number {
+  height: 120px;
   width: 80vw;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -60px;
+  margin-left: -40vw;
+}
+.account-number .account-number-label {
+  display: block;
+  width: 100%;
   text-align: left;
 }
-.panel.login .account-number-input {
+.account-number .account-number-input {
   display: block;
-  height: 7vh;
-  margin: 2vh auto 1vh;
-  width: 80vw;
+  height: 36px;
+  margin: 6px 0;
+  width: 100%;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
 }
-.panel.login .save-label {
+.account-number .save-label {
   display: block;
-  margin: 0 auto;
-  width: 80vw;
+  width: 100%;
   text-align: left;
-}
-.panel.login button {
-  display: block;
-  height: 26pt;
-  margin: 90pt auto 10pt;
-  width: 20%;
 }

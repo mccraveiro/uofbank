@@ -28,42 +28,13 @@ h1 {
   background-color: #ccc;
   box-sizing: border-box;
   height: 100%;
-  padding: 12vh 0 0vh;
+  padding: 72px 0;
   overflow-y: auto;
   position: relative;
   width: 100%;
 }
 .panel::-webkit-scrollbar {
   width: 0 !important;
-}
-.panel.main {
-  padding-bottom: 12vh;
-}
-header {
-  background-color: #333;
-  color: #fff;
-  height: 12vh;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-}
-header h1 {
-  line-height: 12vh;
-  font-size: 6vh;
-  margin: 0 6vw;
-  vertical-align: middle;
-  display: inline-block;
-}
-header i {
-  float: right;
-  width: 15vw;
-  height: 12vh;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 12vh !important;
-  font-size: 6vh;
-  text-align: center;
 }
 .card {
   background: #fff;
@@ -91,78 +62,4 @@ header i {
 }
 .card h2.balance {
   font-size: 1.2rem;
-}
-.swiper-container {
-  -webkit-animation: fly-in-from-left 0.5s 1s ease both;
-  animation: fly-in-from-left 0.5s 1s ease both;
-  -webkit-transform-origin: top left;
-  transform-origin: top left;
-}
-.swiper-container(even) {
-  -webkit-animation-name: fly-in-from-right;
-  animation-name: fly-in-from-right;
-  -webkit-animation-delay: 1.1s;
-  animation-delay: 1.1s;
-  -webkit-transform-origin: top right;
-  transform-origin: top right;
-}
-@-moz-keyframes fly-in-from-left {
-  0% {
-    transform: translateY(15rem) rotate(15deg);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fly-in-from-left {
-  0% {
-    transform: translateY(15rem) rotate(15deg);
-    opacity: 0;
-  }
-}
-@-o-keyframes fly-in-from-left {
-  0% {
-    transform: translateY(15rem) rotate(15deg);
-    opacity: 0;
-  }
-}
-@-ms-keyframes fly-in-from-left {
-  0% {
-    transform: translateY(15rem) rotate(15deg);
-    opacity: 0;
-  }
-}
-@keyframes fly-in-from-left {
-  0% {
-    transform: translateY(15rem) rotate(15deg);
-    opacity: 0;
-  }
-}
-@-moz-keyframes fly-in-from-right {
-  0% {
-    transform: translateY(15rem) rotate(-15deg);
-    opacity: 0;
-  }
-}
-@-webkit-keyframes fly-in-from-right {
-  0% {
-    transform: translateY(15rem) rotate(-15deg);
-    opacity: 0;
-  }
-}
-@-o-keyframes fly-in-from-right {
-  0% {
-    transform: translateY(15rem) rotate(-15deg);
-    opacity: 0;
-  }
-}
-@-ms-keyframes fly-in-from-right {
-  0% {
-    transform: translateY(15rem) rotate(-15deg);
-    opacity: 0;
-  }
-}
-@keyframes fly-in-from-right {
-  0% {
-    transform: translateY(15rem) rotate(-15deg);
-    opacity: 0;
-  }
 }

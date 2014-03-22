@@ -17,4 +17,5 @@ gulp.task('watch', function() {
     gulp.watch('./www/assets/styles/source/*.styl', ['styles', 'cca']);
 });
 
-gulp.task('default', ['styles', 'watch', 'cca']);
+//gulp.task('default', ['styles', 'watch', 'cca']);
+gulp.task('default', ['styles', 'cca']);

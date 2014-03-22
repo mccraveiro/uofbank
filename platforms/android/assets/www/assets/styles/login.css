@@ -11,17 +11,32 @@
   display: block;
   width: 100%;
   text-align: left;
+  font-size: 14pt;
+  font-weight: 300;
 }
 .account-number .account-number-input {
   display: block;
-  height: 36px;
+  height: 48px;
   margin: 6px 0;
   width: 100%;
   border: 1px solid #aaa;
   box-sizing: border-box;
+  font-size: 14pt;
+  padding: 3px 10px;
 }
 .account-number .save-label {
   display: block;
   width: 100%;
   text-align: left;
+  font-size: 12pt;
+  line-height: 30px;
+  vertical-align: top;
+  color: #666;
+  font-weight: 300;
+}
+.account-number .save-label input {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+  margin-top: 0;
 }

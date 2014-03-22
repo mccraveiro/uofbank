@@ -11,7 +11,8 @@ window.onload = function() {
 }
 
 var app = angular.module('uofbank', [
-    'uofbank.pin'
+    'uofbank.pin',
+    'uofbank.header'
 ]);
 
 app.run(function ($rootScope, $location) {

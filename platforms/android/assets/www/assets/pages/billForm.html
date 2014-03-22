@@ -1,22 +1,22 @@
 <div class="panel main" ng-controller="billFormController">
-    
+
     <ng-include src="'assets/pages/header.html'"></ng-include>
-    
+
     <div class="billFormConfimation">
-        <p><h2>Payee: Rogers </p>
-        
-        <p><h2>Account Number: 2332 2398 3987 9872</h2></p>
+        <a>Payee: </a> <p id="pay"></p>
 
-        <p><h2>Amount: $123.45</h2></p>
-    </div>
-    
-    <div class="billFormBtn">   
-        <div>
-            <button class="btn" ng-click="edit()">Edit</button>
-        </div>
+        <a>Account Number: </a> <p id="accnum"></p>
 
-        <div>
-            <button class="btn" ng-click="pay()">Pay</button>
-        </div>
+        <a>Amount: </a> <p id="amnt"></p>
+
     </div>
+
+    <section class="nav">
+        <div class="btn2" ng-click="edit()">
+            <h3>Edit</h3>
+        </div>
+        <div class="btn2" ng-click="pay()">
+            <h3>Pay</h3>
+        </div>
+    </section>
 </div>

@@ -1,7 +1,7 @@
 <div class="panel main" ng-controller="billFormController">
-    
+
     <ng-include src="'assets/pages/header.html'"></ng-include>
-    
+
     <div class="billFormConfimation">
         <a>Payee: </a> <p id="pay"></p>
 
@@ -10,14 +10,13 @@
         <a>Amount: </a> <p id="amnt"></p>
 
     </div>
-    
-    <div class="billFormBtn">   
-        <div>
-            <button class="btn" ng-click="edit()">Edit</button>
-        </div>
 
-        <div>
-            <button class="btn" ng-click="pay()">Pay</button>
+    <section class="nav">
+        <div class="btn2" ng-click="edit()">
+            <h3>Edit</h3>
         </div>
-    </div>
+        <div class="btn2" ng-click="pay()">
+            <h3>Pay</h3>
+        </div>
+    </section>
 </div>

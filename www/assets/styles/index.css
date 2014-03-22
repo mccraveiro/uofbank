@@ -106,44 +106,6 @@ header i {
   -webkit-transform-origin: top right;
   transform-origin: top right;
 }
-.nav {
-  background-color: #666;
-  bottom: 0;
-  box-sizing: border-box;
-  height: 12vh !important;
-  left: 0;
-  position: fixed;
-  width: 100vw;
-  z-index: 999;
-}
-.nav .btn {
-  box-sizing: border-box;
-  display: inline-block;
-  height: 12vh;
-  line-height: 12vh;
-  padding: 0 1vw;
-  text-align: center;
-  vertical-align: middle;
-  width: 32vw;
-}
-.nav .btn i {
-  height: 12vh;
-  color: #fff;
-  display: inline-block;
-  font-size: 6vw;
-  line-height: 12vh;
-  margin: 0 1vw;
-  vertical-align: middle;
-}
-.nav .btn h3 {
-  color: #fff;
-  display: inline-block;
-  font-size: 4vw;
-  font-weight: 700;
-  line-height: 12vh;
-  margin: 0;
-  vertical-align: middle;
-}
 @-moz-keyframes fly-in-from-left {
   0% {
     transform: translateY(15rem) rotate(15deg);

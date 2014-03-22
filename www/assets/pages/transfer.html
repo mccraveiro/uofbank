@@ -1,5 +1,5 @@
 <div class="panel main" ng-controller="transferController">
-    
+
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
     <div class="swiper-container">
@@ -22,23 +22,21 @@
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
-            
+
             <section class="card swiper-slide">
                 <h2>Card Number: 4353 6745 2345 8472</h1>
                 <h2>Good Thru: 10/19</h2>
                 <h2>John T.</h2>
             </section>
 
-            
+
             <section class="card swiper-slide">
                 <h1>Card Number: 7235 9345 7621 8362</h1>
                 <h2>Good Thru: 01/20</h2>
                 <h2>Marie T.</h2>
             </section>
         </div>
-    </div> 
-
-
+    </div>
 
     <div class="slider">
         <br>
@@ -46,18 +44,13 @@
         <br>
         <input type="range" ng-model="time" min="0" max="2000" step="25">
     </div>
-    
 
-	<div class="transBtn">
-
-        <div>
-            <button class="btn" ng-click="mainPage()">Main Page</button>
+    <section class="nav">
+        <div class="btn2" ng-click="mainPage()">
+            <h3>Main Page</h3>
         </div>
-        
-        <div>
-            <button class="btn" ng-click="transferForm()">Transfer</button>
+        <div class="btn2" ng-click="transferForm()">
+            <h3>Transfer</h3>
         </div>
-   		
-	<div>
+    </section>
 </div>
-

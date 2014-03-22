@@ -1,27 +1,19 @@
 <div class="panel main" ng-controller="transferFormController">
-    
+
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
-    
-        <div class="transferForm">
-            <h2>From: 1241 4125 1234 5121</h2>
-            <h2>To: 4353 6745 2345 8472<h2>
-            <h2>Amount: </h2>
+    <div class="transferForm">
+        <h2>From: 1241 4125 1234 5121</h2>
+        <h2>To: 4353 6745 2345 8472<h2>
+        <h2>Amount: </h2>
+    </div>
+
+    <section class="nav">
+        <div class="btn2" ng-click="transfer()">
+            <h3>Edit</h3>
         </div>
-    
-    
-
-    <center>
-        <div class="transferBtn">
-
-        <div>
-            <button class="btn" ng-click="transfer()">Edit</button>
-        </div>    
-
-        <div>
-            <button class="btn" ng-click="pay()">Transfer</button>    
+        <div class="btn2" ng-click="pay()">
+            <h3>Transfer</h3>
         </div>
-        <div>
-    </center>
+    </section>
 </div>
-

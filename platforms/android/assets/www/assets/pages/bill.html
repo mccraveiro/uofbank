@@ -4,9 +4,9 @@
     <center>
         <h1>Bills</h1>
     </center>
-    
 
-    
+
+
     <div class="topBtn">
         <div>
             <button ng-click="notification()">+ Notification</button>
@@ -14,29 +14,28 @@
 
         <div>
             <button ng-click="qrcode()">QRCode</button>
-        </div>            
+        </div>
     </div>
 
     <div class="billForm">
         <p><h2>Payee</h2></p>
-        <p><input type="text"></p>
+        <p><input type="text" id="payee"></p>
 
         <p><h2>Account Number</h2></p>
-        <p><input type="text"></p>
+        <p><input type="text" id="accnumber"></p>
 
         <p><h2>Amount</h2></p>
-        <p><input type="text"></p>
+        <p><input type="text" id="amount"></p>
 
     </div>
-       
-    <div class="billBtn">
-        <div>
-            <button class="btn" ng-click="mainPage()">Main Page</button>
+
+    <section class="nav">
+        <div class="btn2" ng-click="mainPage()">
+            <h3>Main Page</h3>
         </div>
-        
-        <div>
-            <button class="btn" ng-click="billForm()">Pay</button>
+        <div class="btn2" ng-click="billForm()">
+            <h3>Pay</h3>
         </div>
-    </div>   
-    
+    </section>
+
 </div>

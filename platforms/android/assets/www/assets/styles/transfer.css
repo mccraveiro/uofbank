@@ -21,3 +21,11 @@ div.transBtn > div:nth-child(2){
 	float: right;
 	margin-right: 15%;
 }
+
+.slider{
+	margin-left: 15%; 
+}
+
+.slider input{
+	width: 250px;
+}

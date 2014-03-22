@@ -1,0 +1,44 @@
+<div class="panel main" ng-controller="billController">
+    <header>
+        <h1>UofBank</h1>
+    </header>
+
+    <center>
+        <h1>Bills</h1>
+    </center>
+    
+
+    
+    <div class="topBtn">
+        <div>
+            <button ng-click="notification()">+ Notification</button>
+        </div>
+
+        <div>
+            <button ng-click="qrcode()">QRCode</button>
+        </div>            
+    </div>
+
+    <div class="billForm">
+        <p><h2>Payee</h2></p>
+        <p><input type="text"></p>
+
+        <p><h2>Account Number</h2></p>
+        <p><input type="text"></p>
+
+        <p><h2>Amount</h2></p>
+        <p><input type="text"></p>
+
+    </div>
+       
+    <div class="billBtn">
+        <div>
+            <button class="btn" ng-click="mainPage()">Main Page</button>
+        </div>
+        
+        <div>
+            <button class="btn" ng-click="billForm()">Pay</button>
+        </div>
+    </div>   
+    
+</div>

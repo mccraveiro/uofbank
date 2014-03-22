@@ -44,6 +44,17 @@ header h1 {
   font-size: 6vh;
   margin: 0 6vw;
   vertical-align: middle;
+  display: inline-block;
+}
+header i {
+  float: right;
+  width: 15vw;
+  height: 12vh;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 12vh !important;
+  font-size: 6vh;
+  text-align: center;
 }
 .card {
   background: #fff;

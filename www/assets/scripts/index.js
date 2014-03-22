@@ -81,7 +81,9 @@ app.run(function ($rootScope, $location) {
     })();
 
     // Show Login
-    $rootScope.Pages.go('login');
+    //$rootScope.Pages.go('login');
+    // For Debug
+    $rootScope.Pages.go('main');
 });
 
 app.controller('loginController', function ($scope, $rootScope) {

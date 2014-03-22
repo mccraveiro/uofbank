@@ -24,7 +24,10 @@ app.run(function ($rootScope, $location) {
             login: false,
             main: false,
             transfer: false,
-            transferForm: false
+            transferForm: false,
+            checkBalance: false,
+            bill: false,
+            billForm: false
         };
         var pinVisible = false;
 
@@ -96,8 +99,16 @@ app.controller('mainController', function ($scope, $rootScope) {
 
     console.log("HEY MAN");
 
+    $scope.bill = function() {
+        $rootScope.Pages.go('bill');
+    };
+
     $scope.transfer = function() {
         $rootScope.Pages.go('transfer');
+    };
+
+    $scope.checkBalance = function() {
+        $rootScope.Pages.go('checkBalance');
     };
 });
 
@@ -105,6 +116,10 @@ app.controller('mainController', function ($scope, $rootScope) {
 app.controller('transferController', function ($scope, $rootScope) {
 
     console.log("HEY MAN");
+
+    $scope.mainPage = function() {
+        $rootScope.Pages.go('main');
+    };
 
     $scope.transferForm = function() {
         $rootScope.Pages.go('transferForm');
@@ -117,5 +132,48 @@ app.controller('transferFormController', function ($scope, $rootScope) {
 
     $scope.transfer = function() {
         $rootScope.Pages.go('transfer');
+    };
+
+    $scope.pay = function() {
+        $rootScope.Pages.togglePin('main');
+    };
+});
+
+
+app.controller('billController', function ($scope, $rootScope) {
+
+    console.log("HEY MAN");
+
+    $scope.mainPage = function() {
+        $rootScope.Pages.go('main');
+    };
+
+    $scope.billForm = function() {
+        $rootScope.Pages.go('billForm');
+    };
+
+});
+
+
+app.controller('billFormController', function ($scope, $rootScope) {
+
+    console.log("HEY MAN");
+
+    $scope.edit = function() {
+        $rootScope.Pages.go('bill');
+    };
+
+    $scope.pay = function() {
+        $rootScope.Pages.togglePin('main');
+    };
+
+});
+
+app.controller('checkBalanceController', function ($scope, $rootScope) {
+
+    console.log("HEY MAN");
+
+    $scope.mainPage = function() {
+        $rootScope.Pages.go('main');
     };
 });

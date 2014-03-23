@@ -3,6 +3,7 @@ var app = angular.module('uofbank.pin', []);
 app.controller('pinController', function ($scope, $rootScope) {
 
     $scope.pin = '';
+    $scope.shake = false;
     $scope.keyboard = {
         '1': false,
         '2': false,
@@ -40,6 +41,12 @@ app.controller('pinController', function ($scope, $rootScope) {
                 $scope.pin = '';
             } else {
                 $scope.pin = '';
+                $scope.shake = true;
+                setTimeout(function () {
+                    $scope.$apply(function () {
+                        $scope.shake = false;
+                    });
+                }, 400);
             }
         }
     };

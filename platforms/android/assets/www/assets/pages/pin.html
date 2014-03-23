@@ -1,4 +1,4 @@
-<div class="overlay pin" ng-class="{show: Pages.isPinVisible()}" ng-controller="pinController">
+<div class="overlay pin" ng-class="{'show': Pages.isPinVisible(), 'shake': shake}" ng-controller="pinController">
 
     <div class="pin-value">
         <i class="fa fa-circle" ng-show="pin.length > 0"></i>

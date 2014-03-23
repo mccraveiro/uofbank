@@ -13,6 +13,14 @@
     &.show
         top: 0%
 
+    &.shake
+        -webkit-animation-name: shake-horizontal;
+        -webkit-animation-duration: 100ms;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: ease-in-out;
+        -webkit-animation-delay: 0s;
+        -webkit-animation-play-state: running;
+
     .pin-value
         height: 20vh
         width: 90vw
@@ -55,5 +63,158 @@
     to {
         background-color: white
         color: #666
+    }
+}
+
+@-webkit-keyframes shake-horizontal {
+    0% {
+        -webkit-transform: translate(0px, 0px)
+    }
+    2% {
+        -webkit-transform: translate(-4px, 0px)
+    }
+    4% {
+        -webkit-transform: translate(2px, 0px)
+    }
+    6% {
+        -webkit-transform: translate(-3px, 0px)
+    }
+    8% {
+        -webkit-transform: translate(9px, 0px)
+    }
+    10% {
+        -webkit-transform: translate(2px, 0px)
+    }
+    12% {
+        -webkit-transform: translate(-6px, 0px)
+    }
+    14% {
+        -webkit-transform: translate(-7px, 0px)
+    }
+    16% {
+        -webkit-transform: translate(2px, 0px)
+    }
+    18% {
+        -webkit-transform: translate(7px, 0px)
+    }
+    20% {
+        -webkit-transform: translate(-1px, 0px)
+    }
+    22% {
+        -webkit-transform: translate(-10px, 0px)
+    }
+    24% {
+        -webkit-transform: translate(-10px, 0px)
+    }
+    26% {
+        -webkit-transform: translate(3px, 0px)
+    }
+    28% {
+        -webkit-transform: translate(-5px, 0px)
+    }
+    30% {
+        -webkit-transform: translate(4px, 0px)
+    }
+    32% {
+        -webkit-transform: translate(-6px, 0px)
+    }
+    34% {
+        -webkit-transform: translate(-2px, 0px)
+    }
+    36% {
+        -webkit-transform: translate(-6px, 0px)
+    }
+    38% {
+        -webkit-transform: translate(-2px, 0px)
+    }
+    40% {
+        -webkit-transform: translate(4px, 0px)
+    }
+    42% {
+        -webkit-transform: translate(8px, 0px)
+    }
+    44% {
+        -webkit-transform: translate(-3px, 0px)
+    }
+    46% {
+        -webkit-transform: translate(-10px, 0px)
+    }
+    48% {
+        -webkit-transform: translate(4px, 0px)
+    }
+    50% {
+        -webkit-transform: translate(-6px, 0px)
+    }
+    52% {
+        -webkit-transform: translate(6px, 0px)
+    }
+    54% {
+        -webkit-transform: translate(-8px, 0px)
+    }
+    56% {
+        -webkit-transform: translate(5px, 0px)
+    }
+    58% {
+        -webkit-transform: translate(9px, 0px)
+    }
+    60% {
+        -webkit-transform: translate(7px, 0px)
+    }
+    62% {
+        -webkit-transform: translate(1px, 0px)
+    }
+    64% {
+        -webkit-transform: translate(2px, 0px)
+    }
+    66% {
+        -webkit-transform: translate(-2px, 0px)
+    }
+    68% {
+        -webkit-transform: translate(-7px, 0px)
+    }
+    70% {
+        -webkit-transform: translate(-1px, 0px)
+    }
+    72% {
+        -webkit-transform: translate(-6px, 0px)
+    }
+    74% {
+        -webkit-transform: translate(5px, 0px)
+    }
+    76% {
+        -webkit-transform: translate(0px, 0px)
+    }
+    78% {
+        -webkit-transform: translate(9px, 0px)
+    }
+    80% {
+        -webkit-transform: translate(-3px, 0px)
+    }
+    82% {
+        -webkit-transform: translate(8px, 0px)
+    }
+    84% {
+        -webkit-transform: translate(-2px, 0px)
+    }
+    86% {
+        -webkit-transform: translate(-1px, 0px)
+    }
+    88% {
+        -webkit-transform: translate(-3px, 0px)
+    }
+    90% {
+        -webkit-transform: translate(4px, 0px)
+    }
+    92% {
+        -webkit-transform: translate(0px, 0px)
+    }
+    94% {
+        -webkit-transform: translate(4px, 0px)
+    }
+    96% {
+        -webkit-transform: translate(2px, 0px)
+    }
+    98% {
+        -webkit-transform: translate(-2px, 0px)
     }
 }

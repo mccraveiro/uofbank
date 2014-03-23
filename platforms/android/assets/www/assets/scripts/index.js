@@ -15,7 +15,8 @@ window.onload = function() {
 var app = angular.module('uofbank', [
     'ui.mask',
     'uofbank.pin',
-    'uofbank.header'
+    'uofbank.header',
+    'uofbank.balance'
 ]);
 
 app.run(function ($rootScope, $location) {
@@ -127,15 +128,7 @@ app.controller('mainController', function ($scope, $rootScope) {
 
     $scope.checkBalance = function() {
         $rootScope.Pages.go('checkBalance');
-
-        $(function() {
-            $('#monthSelector').change(function(){
-                $('.month').hide();
-                $('#' + $(this).val()).show();
-            });
-        });
     };
-
 });
 
 
@@ -169,8 +162,6 @@ app.controller('transferFormController', function ($scope, $rootScope) {
 
 app.controller('billController', function ($scope, $rootScope) {
 
-    console.log("HEY MAN");
-
     $scope.mainPage = function() {
         $rootScope.Pages.go('main');
     };
@@ -201,12 +192,5 @@ app.controller('billFormController', function ($scope, $rootScope) {
         $rootScope.Pages.togglePin(function () {
             $rootScope.Pages.go('main');
         });
-    };
-});
-
-app.controller('checkBalanceController', function ($scope, $rootScope) {
-
-    $scope.mainPage = function() {
-        $rootScope.Pages.go('main');
     };
 });

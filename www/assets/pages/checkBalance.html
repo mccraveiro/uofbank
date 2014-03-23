@@ -1,91 +1,28 @@
-<div class="panel main" ng-controller="checkBalanceController">
+<div class="panel main" ng-controller="balanceController">
 
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
-    <center>
-        <h1>Check Balance</h1>
-    </center>
+    <section class="card">
+        <h1>Checking Balance</h1>
+        <h2>4567 XXXX XXXX 1234</h2>
+        <span class="amount">$ 123.45</span>
+    </section>
 
-    <div class="checkBalanceForm">
-         <div>
-        	<h2>Accout Number: 1241 **** **** 5121</h2>
-        	<h2>Total: $123</h2>
-        </div>
-    </div>
-
-    <div>
-        <select id="monthSelector">
-            <option>Transactions</option>
-            <option value="current">Current Period</option>
-            <option value="jan">January 2014</option>
-            <option value="feb">February 2014</option>
-            <option value="dec">December 2013</option>
+    <section class="transactions">
+        <select ng-model="selectedMonth">
+            <option value="0">Current Period</option>
+            <option value="1">February 2014</option>
+            <option value="2">January 2014</option>
+            <option value="3">December 2013</option>
         </select>
-    </div>
 
-
-    <div id="current" class="month">
-         <div>
-            <p>McDonalds $10.00</p>
-            <a>13/03/2014</a>
+        <div class="month" ng-repeat="month in transactions" ng-show="$index == selectedMonth">
+            <div class="transaction" ng-repeat="transaction in month">
+                {{transaction.date}} - {{transaction.name}}
+                <span>$ {{transaction.amount}}</span>
+            </div>
         </div>
-
-        <div>
-            <p>Subway $15.00</p>
-            <a>08/03/2014</a>
-        </div>
-
-        <div>
-            <p>Walmart $78.32</p>
-            <a>02/03/2014</a>
-        </div>
-    </div>
-
-    <div id="jan" class="month">
-         <div>
-            <p>Mr. Sub $10.00</p>
-            <a>20/01/2014</a>
-        </div>
-
-        <div>
-            <p>EB Games $450.00</p>
-            <a>13/01/2014</a>
-        </div>
-
-        <div>
-            <p>noFrios $132.51</p>
-            <a>02/01/2014</a>
-        </div>
-    </div>
-
-    <div id="feb" class="month">
-         <div>
-            <p>Burger King $10.00</p>
-            <a>28/02/2014</a>
-        </div>
-
-        <div>
-            <p>Canada Computers $98.00</p>
-            <a>07/02/2014</a>
-        </div>
-
-        <div>
-            <p>Metro $157.01</p>
-            <a>02/02/2014</a>
-        </div>
-    </div>
-
-    <div id="dec" class="month">
-         <div>
-            <p>The Brunswick House $25.00</p>
-            <a>28/02/2014</a>
-        </div>
-
-        <div>
-            <p>Home Hardware $28.00</p>
-            <a>05/02/2014</a>
-        </div>
-    </div>
+    </section>
 
     <section class="nav">
         <div class="btn1" ng-click="mainPage()">

@@ -23,7 +23,6 @@ app.run(function ($rootScope, $location) {
     $rootScope.Pages = (function () {
 
         var currentPage;
-        var nextPage;
         var _pages = {
             login: false,
             main: false,
@@ -33,7 +32,9 @@ app.run(function ($rootScope, $location) {
             bill: false,
             billForm: false
         };
+
         var pinVisible = false;
+        var onPinSuccess;
 
         return {
 
@@ -60,25 +61,25 @@ app.run(function ($rootScope, $location) {
                 console.log('Current page: ' + page);
             },
 
-            nextPage: function () {
+            pinSuccess: function () {
 
                 pinVisible = false;
 
-                if (nextPage) {
-                    $rootScope.Pages.go(nextPage);
-                    nextPage = undefined;
+                if (onPinSuccess) {
+                    onPinSuccess();
+                    onPinSuccess = undefined;
                 }
             },
 
-            togglePin: function (next) {
+            togglePin: function (success) {
 
                 if (pinVisible) {
                     pinVisible = false;
                 } else {
                     pinVisible = true;
 
-                    if (next) {
-                        nextPage = next;
+                    if (success) {
+                        onPinSuccess = success;
                     }
                 }
             },
@@ -98,18 +99,23 @@ app.controller('loginController', function ($scope, $rootScope) {
 
     $scope.account = {
         number: '4505987698769876',
-        save: false
+        save: true
     };
 
     $scope.signIn = function() {
-        $rootScope.Pages.togglePin('main');
+        $rootScope.Pages.togglePin(function () {
+
+            if (!$scope.account.save) {
+                $scope.account.number = '';
+            }
+
+            $rootScope.Pages.go('main');
+        });
     };
 
 });
 
 app.controller('mainController', function ($scope, $rootScope) {
-
-    console.log("HEY MAN");
 
     $scope.bill = function() {
         $rootScope.Pages.go('bill');
@@ -135,8 +141,6 @@ app.controller('mainController', function ($scope, $rootScope) {
 
 app.controller('transferController', function ($scope, $rootScope) {
 
-    console.log("HEY MAN");
-
     $scope.mainPage = function() {
         $rootScope.Pages.go('main');
     };
@@ -151,14 +155,14 @@ app.controller('transferController', function ($scope, $rootScope) {
 
 app.controller('transferFormController', function ($scope, $rootScope) {
 
-    console.log("HEY MAN");
-
     $scope.transfer = function() {
         $rootScope.Pages.go('transfer');
     };
 
     $scope.pay = function() {
-        $rootScope.Pages.togglePin('main');
+        $rootScope.Pages.togglePin(function () {
+            $rootScope.Pages.go('main');
+        });
     };
 });
 
@@ -189,20 +193,18 @@ app.controller('billController', function ($scope, $rootScope) {
 
 app.controller('billFormController', function ($scope, $rootScope) {
 
-    console.log("HEY MAN");
-
     $scope.edit = function() {
         $rootScope.Pages.go('bill');
     };
 
     $scope.pay = function() {
-        $rootScope.Pages.togglePin('main');
+        $rootScope.Pages.togglePin(function () {
+            $rootScope.Pages.go('main');
+        });
     };
 });
 
 app.controller('checkBalanceController', function ($scope, $rootScope) {
-
-    console.log("HEY MAN");
 
     $scope.mainPage = function() {
         $rootScope.Pages.go('main');

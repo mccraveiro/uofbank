@@ -1,7 +1,7 @@
 .topBtn{
-	margin-top: 5%;
+	margin-top: 3%;
 	width: 100%;
-	height: 10%;
+	height: 8%;
 }
 
 div.topBtn > div:nth-child(1){
@@ -45,4 +45,14 @@ div.billBtn > div:nth-child(2){
 	margin-right: 15%;
 }
 
+.title{
+	text-align: center;
+}
 
+.field{
+	width: 100%;
+}
+
+.text{
+	font-size: 130%;
+}

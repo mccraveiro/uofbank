@@ -44,16 +44,6 @@ div.topBtn > div:nth-child(2){
 	height: 50px;
 }
 
-div.billBtn > div:nth-child(1){
-	float: left;
-	margin-left: 15%
-
-}
-
-div.billBtn > div:nth-child(2){
-	float: right;
-	margin-right: 15%;
-}
 
 .title{
 	text-align: center;

@@ -203,7 +203,7 @@ app.controller('billFormController', function ($scope, $rootScope) {
 
 app.controller('notificationController', function ($scope, $rootScope) {
     
-    $scope.confirm = function() {
+    $scope.confirmNotification = function() {
         $rootScope.Pages.go('bill');
     };
     

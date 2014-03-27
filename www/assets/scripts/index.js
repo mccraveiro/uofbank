@@ -31,7 +31,8 @@ app.run(function ($rootScope, $location) {
             transferForm: false,
             checkBalance: false,
             bill: false,
-            billForm: false
+            billForm: false,
+            notification: false
         };
 
         var pinVisible = false;
@@ -166,6 +167,10 @@ app.controller('billController', function ($scope, $rootScope) {
         $rootScope.Pages.go('main');
     };
 
+    $scope.notification = function() {
+        $rootScope.Pages.go('notification');
+    };
+
     $scope.billForm = function() {
         $rootScope.Pages.go('billForm');
 
@@ -192,5 +197,18 @@ app.controller('billFormController', function ($scope, $rootScope) {
         $rootScope.Pages.togglePin(function () {
             $rootScope.Pages.go('main');
         });
+    };
+});
+
+
+app.controller('notificationController', function ($scope, $rootScope) {
+    
+    $scope.confirm = function() {
+        $rootScope.Pages.go('bill');
+    };
+    
+
+    $scope.back = function() {
+        $rootScope.Pages.go('bill');
     };
 });

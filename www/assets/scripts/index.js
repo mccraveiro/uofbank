@@ -14,6 +14,7 @@ window.onload = function() {
 
 var app = angular.module('uofbank', [
     'ui.mask',
+    'uofbank.db',
     'uofbank.pin',
     'uofbank.header',
     'uofbank.balance'
@@ -97,7 +98,9 @@ app.run(function ($rootScope, $location) {
     $rootScope.Pages.go('login');
 });
 
-app.controller('loginController', function ($scope, $rootScope) {
+app.controller('loginController', function ($scope, $rootScope, DB) {
+
+    DB.data.x = 4;
 
     $scope.account = {
         number: '4505987698769876',
@@ -105,6 +108,7 @@ app.controller('loginController', function ($scope, $rootScope) {
     };
 
     $scope.signIn = function() {
+
         $rootScope.Pages.togglePin(function () {
 
             if (!$scope.account.save) {
@@ -117,7 +121,15 @@ app.controller('loginController', function ($scope, $rootScope) {
 
 });
 
-app.controller('mainController', function ($scope, $rootScope) {
+app.controller('mainController', function ($scope, $rootScope, DB) {
+
+    console.log(DB);
+
+    $scope.accounts = DB.data.accounts;
+
+    $scope.$watch('accounts', function (newVal, oldVal) {
+        $scope.accounts = newVal;
+    });
 
     $scope.bill = function() {
         $rootScope.Pages.go('bill');
@@ -202,11 +214,11 @@ app.controller('billFormController', function ($scope, $rootScope) {
 
 
 app.controller('notificationController', function ($scope, $rootScope) {
-    
+
     $scope.confirm = function() {
         $rootScope.Pages.go('bill');
     };
-    
+
 
     $scope.back = function() {
         $rootScope.Pages.go('bill');

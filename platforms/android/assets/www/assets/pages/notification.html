@@ -1,42 +1,32 @@
-<div class="panel main" ng-controller="billController">
+<div class="panel main" ng-controller="notificationController">
     <ng-include src="'assets/pages/header.html'"></ng-include>
-
-    <h1 class="title">Bills</h1>
-
-    <div class="topBtn">
-        <div ng-click="notification()">
-            <h3>+ Notification</h3>
-        </div>
-
-        <div ng-click="qrcode()">
-            <h3>QRCode</h3>
-        </div>
-    </div>
+    
+    <h1 class="title">Notification</h1>
 
     <div class="card">
         <p>
             <span class="text">Payee: </span>
             <input class="field" type="text" id="payee">
         </p>
-
+        
         <p>
             <span class="text">Account Number: </span>
             <input class="field" type="text" id="accnumber">
         </p>
-
+        
 
         <p>
-            <span class="text">Amount: </span>
+            <span class="text">Data: </span>
             <input class="field" type="text" id="amount">
         </p>
     </div>
 
     <section class="nav">
-        <div class="btn2" ng-click="mainPage()">
+        <div class="btn2" ng-click="back()">
             <h3>Back</h3>
         </div>
-        <div class="btn2" ng-click="billForm()">
-            <h3>Continue</h3>
+        <div class="btn2" ng-click="confirmNotification()">
+            <h3>Confirm</h3>
         </div>
     </section>
 

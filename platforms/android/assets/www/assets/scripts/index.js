@@ -14,6 +14,7 @@ window.onload = function() {
 
 var app = angular.module('uofbank', [
     'ui.mask',
+    'uofbank.db',
     'uofbank.pin',
     'uofbank.header',
     'uofbank.balance'
@@ -31,7 +32,8 @@ app.run(function ($rootScope, $location) {
             transferForm: false,
             checkBalance: false,
             bill: false,
-            billForm: false
+            billForm: false,
+            notification: false
         };
 
         var pinVisible = false;
@@ -96,7 +98,9 @@ app.run(function ($rootScope, $location) {
     $rootScope.Pages.go('login');
 });
 
-app.controller('loginController', function ($scope, $rootScope) {
+app.controller('loginController', function ($scope, $rootScope, DB) {
+
+    DB.data.x = 4;
 
     $scope.account = {
         number: '4505987698769876',
@@ -104,6 +108,7 @@ app.controller('loginController', function ($scope, $rootScope) {
     };
 
     $scope.signIn = function() {
+
         $rootScope.Pages.togglePin(function () {
 
             if (!$scope.account.save) {
@@ -116,7 +121,15 @@ app.controller('loginController', function ($scope, $rootScope) {
 
 });
 
-app.controller('mainController', function ($scope, $rootScope) {
+app.controller('mainController', function ($scope, $rootScope, DB) {
+
+    console.log(DB);
+
+    $scope.accounts = DB.data.accounts;
+
+    $scope.$watch('accounts', function (newVal, oldVal) {
+        $scope.accounts = newVal;
+    });
 
     $scope.bill = function() {
         $rootScope.Pages.go('bill');
@@ -166,6 +179,10 @@ app.controller('billController', function ($scope, $rootScope) {
         $rootScope.Pages.go('main');
     };
 
+    $scope.notification = function() {
+        $rootScope.Pages.go('notification');
+    };
+
     $scope.billForm = function() {
         $rootScope.Pages.go('billForm');
 
@@ -192,5 +209,18 @@ app.controller('billFormController', function ($scope, $rootScope) {
         $rootScope.Pages.togglePin(function () {
             $rootScope.Pages.go('main');
         });
+    };
+});
+
+
+app.controller('notificationController', function ($scope, $rootScope) {
+
+    $scope.confirm = function() {
+        $rootScope.Pages.go('bill');
+    };
+
+
+    $scope.back = function() {
+        $rootScope.Pages.go('bill');
     };
 });

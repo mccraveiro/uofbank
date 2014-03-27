@@ -3,16 +3,10 @@
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
     <!-- Balances -->
-    <section class="card" ng-click="checkBalance()">
-        <h1>Checking Balance</h1>
-        <h2>4567 XXXX XXXX 1234</h2>
-        <span class="amount">$ 123.45</span>
-    </section>
-
-    <section class="card">
-        <h1>Savings Balance</h1>
-        <h2>4567 XXXX XXXX 4321</h2>
-        <span class="amount">$ 987.65</span>
+    <section class="card" ng-repeat="account in accounts" ng-click="checkBalance()">
+        <h1>{{account.name}} Balance</h1>
+        <h2>{{account.number}}</h2>
+        <span class="amount">$ {{account.amount}}</span>
     </section>
 
     <!-- notifications -->

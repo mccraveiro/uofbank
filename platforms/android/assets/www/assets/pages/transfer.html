@@ -6,16 +6,16 @@
         <div class="swiper-wrapper">
             <!--First Slide-->
             <section class="card swiper-slide">
-                <h2>Card Number: 1241 4125 1234 5121</h1>
-                <h2>Good Thru: 10/18</h2>
-                <h2>Max C.</h2>
+                <h1 class="accNmbr">1241 4125 1234 5121</h1>
+                <h2>10/18</h2>
+                <span class="amount">Max C.</span>
             </section>
 
             <!--Second Slide-->
             <section class="card swiper-slide">
-                <h1>Card Number: 5312 5361 7854 9135</h1>
-                <h2>Good Thru: 05/16</h2>
-                <h2>Marie C.</h2>
+                <h1 class="accNmbr">5312 5361 7854 9135</h1>
+                <h2>05/16</h2>
+                <span class>Marie C.</h2>
             </section>
         </div>
     </div>
@@ -24,32 +24,34 @@
         <div class="swiper-wrapper">
 
             <section class="card swiper-slide">
-                <h2>Card Number: 4353 6745 2345 8472</h1>
-                <h2>Good Thru: 10/19</h2>
-                <h2>John T.</h2>
+                <h1 class="accNmbr">4353 6745 2345 8472</h1>
+                <h2>10/19</h2>
+                <span class="amount">John T.</span>
             </section>
 
 
             <section class="card swiper-slide">
-                <h1>Card Number: 7235 9345 7621 8362</h1>
-                <h2>Good Thru: 01/20</h2>
-                <h2>Marie T.</h2>
+                <h1 class="accNmbr">7235 9345 7621 8362</h1>
+                <h2>01/20</h2>
+                <span class="amount">Maria T.</span>
             </section>
         </div>
     </div>
 
     <div class="slider">
         <br>
-        <a>Amount: </a><span id="val"ng-bind="time">0</span>
+        <a>Amount: </a><span id="val" ng-bind="time">0</span>
         <br>
         <input type="range" ng-model="time" min="0" max="2000" step="25">
     </div>
 
     <section class="nav">
         <div class="btn2" ng-click="mainPage()">
+            <i class="fa fa-th-large"></i>
             <h3>Main Page</h3>
         </div>
         <div class="btn2" ng-click="transferForm()">
+            <i class="fa fa-chevron-circle-right"></i>
             <h3>Transfer</h3>
         </div>
     </section>

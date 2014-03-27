@@ -1,0 +1,54 @@
+@import "colors"
+
+.nav
+    background-color: color3
+    bottom: 0
+    box-sizing: border-box
+    height: 72px !important
+    left: 0
+    position: fixed
+    width: 100vw
+    z-index: 999
+    text-align: center
+
+    .btn
+        box-sizing: border-box
+        display: inline-block
+        height: 72px
+        line-height: 72px
+        padding: 0 1vw
+        text-align: center
+        vertical-align: middle
+
+    .btn1
+        @extend .nav .btn
+        width: 96vw
+
+    .btn2
+        @extend .nav .btn
+        width: 48vw
+
+    .btn3
+        @extend .nav .btn
+        width: 32vw
+
+    .btn1
+    .btn2
+    .btn3
+        i
+            height: 72px
+            color: white
+            display: inline-block
+            font-size: 6vw
+            line-height: 72px
+            margin: 0 1vw
+            vertical-align: middle
+
+        h3
+            color: white
+            display: inline-block
+            font-size: 4vw
+            font-weight: 700
+            line-height: 72px
+            margin: 0
+            vertical-align: middle

@@ -18,9 +18,19 @@ div.topBtn > div:nth-child(2){
 .billForm{
 	width: 100%;
 	height: 40%;
-	margin-left: 30%;
+	margin-left: 15%;
 }
 
+.billForm .billForm-input {
+  display: block;
+  height: 30px;
+  margin: 6px 0;
+  width: 70%;
+  border: 1px solid #aaa;
+  box-sizing: border-box;
+  font-size: 12pt;
+  padding: 3px 10px;
+}
 
 .billBtn{
 	position: absolute;

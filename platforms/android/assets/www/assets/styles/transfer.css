@@ -29,3 +29,12 @@ div.transBtn > div:nth-child(2){
 .slider input{
 	width: 250px;
 }
+
+
+.accNmbr{
+	font-size: 220%;
+}
+
+.dt{
+	font-size: 130%;	
+}

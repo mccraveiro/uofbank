@@ -2,20 +2,23 @@
 
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
-    <div class="billFormConfimation">
-        <a>Payee: </a> <p id="pay"></p>
+    <div class="card">
+        <h1 id="pay"></h1>
 
-        <a>Account Number: </a> <p id="accnum"></p>
+        <h2 id="accnum"></h2>
 
-        <a>Amount: </a> <p id="amnt"></p>
+        <span class="amount">$ </span> 
+        <span id="amnt" class="amount"></span>
 
     </div>
 
     <section class="nav">
         <div class="btn2" ng-click="edit()">
+            <i class="fa fa-pencil"></i>
             <h3>Edit</h3>
         </div>
         <div class="btn2" ng-click="pay()">
+            <i class="fa fa-check-square-o"></i>
             <h3>Pay</h3>
         </div>
     </section>

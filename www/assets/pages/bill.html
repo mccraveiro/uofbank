@@ -1,6 +1,6 @@
 <div class="panel main" ng-controller="billController">
     <ng-include src="'assets/pages/header.html'"></ng-include>
-    
+
     <h1 class="title">Bills</h1>
 
     <div class="topBtn">
@@ -18,12 +18,12 @@
             <span class="text">Payee: </span>
             <input class="field" type="text" id="payee">
         </p>
-        
+
         <p>
             <span class="text">Account Number: </span>
             <input class="field" type="text" id="accnumber">
         </p>
-        
+
 
         <p>
             <span class="text">Amount: </span>
@@ -33,9 +33,11 @@
 
     <section class="nav">
         <div class="btn2" ng-click="mainPage()">
+            <i class="fa fa-th-large"></i>
             <h3>Main Page</h3>
         </div>
         <div class="btn2" ng-click="billForm()">
+            <i class="fa fa-chevron-circle-right"></i>
             <h3>Pay</h3>
         </div>
     </section>

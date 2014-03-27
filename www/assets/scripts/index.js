@@ -1,17 +1,3 @@
-window.onload = function() {
-    // FIXME Swiper not working
-    var mySwiper = new Swiper('.swiper-container:nth-of-type(1)', {
-        mode:'horizontal',
-        loop: false
-    });
-    var mySwiper = new Swiper('.swiper-container:nth-of-type(2)', {
-        mode:'horizontal',
-        loop: false
-    });
-
-
-}
-
 var app = angular.module('uofbank', [
     'ui.mask',
     'uofbank.db',
@@ -215,7 +201,7 @@ app.controller('billFormController', function ($scope, $rootScope) {
 
 app.controller('notificationController', function ($scope, $rootScope) {
 
-    $scope.confirm = function() {
+    $scope.confirmNotification = function() {
         $rootScope.Pages.go('bill');
     };
 

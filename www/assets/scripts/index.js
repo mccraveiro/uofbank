@@ -127,7 +127,10 @@ app.controller('mainController', function ($scope, $rootScope, DB) {
         $rootScope.Pages.go('transfer');
     };
 
-    $scope.checkBalance = function() {
+    $scope.checkBalance = function(accountID) {
+
+        $rootScope.$broadcast('checkBalance.selectAccount', accountID);
+
         $rootScope.Pages.go('checkBalance');
     };
 });
@@ -219,11 +222,11 @@ app.controller('notificationController', function ($scope, $rootScope) {
 
 
 app.controller('qrcodeController', function ($scope, $rootScope) {
-    
+
     $scope.qrcodeForm = function() {
         $rootScope.Pages.go('qrcodeForm');
     };
-    
+
 
     $scope.back = function() {
         $rootScope.Pages.go('bill');
@@ -231,7 +234,7 @@ app.controller('qrcodeController', function ($scope, $rootScope) {
 });
 
 app.controller('qrcodeFormController', function ($scope, $rootScope) {
-    
+
     $scope.confirm = function() {
         $rootScope.Pages.togglePin(function () {
             $rootScope.Pages.go('main');

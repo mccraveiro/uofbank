@@ -3,7 +3,7 @@
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
     <!-- Balances -->
-    <section class="card" ng-repeat="account in accounts" ng-click="checkBalance()">
+    <section class="card" ng-repeat="account in accounts" ng-click="checkBalance(account.id)">
         <h1>{{account.name}} Balance</h1>
         <h2>{{account.number}}</h2>
         <span class="amount">$ {{account.amount}}</span>

@@ -1,17 +1,3 @@
-window.onload = function() {
-    // FIXME Swiper not working
-    var mySwiper = new Swiper('.swiper-container:nth-of-type(1)', {
-        mode:'horizontal',
-        loop: false
-    });
-    var mySwiper = new Swiper('.swiper-container:nth-of-type(2)', {
-        mode:'horizontal',
-        loop: false
-    });
-
-
-}
-
 var app = angular.module('uofbank', [
     'ui.mask',
     'uofbank.db',
@@ -33,7 +19,9 @@ app.run(function ($rootScope, $location) {
             checkBalance: false,
             bill: false,
             billForm: false,
-            notification: false
+            notification: false,
+            qrcode: false,
+            qrcodeForm: false
         };
 
         var pinVisible = false;
@@ -139,7 +127,10 @@ app.controller('mainController', function ($scope, $rootScope, DB) {
         $rootScope.Pages.go('transfer');
     };
 
-    $scope.checkBalance = function() {
+    $scope.checkBalance = function(accountID) {
+
+        $rootScope.$broadcast('checkBalance.selectAccount', accountID);
+
         $rootScope.Pages.go('checkBalance');
     };
 });
@@ -183,6 +174,10 @@ app.controller('billController', function ($scope, $rootScope) {
         $rootScope.Pages.go('notification');
     };
 
+    $scope.qrcode = function() {
+        $rootScope.Pages.go('qrcode');
+    };
+
     $scope.billForm = function() {
         $rootScope.Pages.go('billForm');
 
@@ -215,12 +210,34 @@ app.controller('billFormController', function ($scope, $rootScope) {
 
 app.controller('notificationController', function ($scope, $rootScope) {
 
-    $scope.confirm = function() {
+    $scope.confirmNotification = function() {
         $rootScope.Pages.go('bill');
     };
 
 
     $scope.back = function() {
         $rootScope.Pages.go('bill');
+    };
+});
+
+
+app.controller('qrcodeController', function ($scope, $rootScope) {
+
+    $scope.qrcodeForm = function() {
+        $rootScope.Pages.go('qrcodeForm');
+    };
+
+
+    $scope.back = function() {
+        $rootScope.Pages.go('bill');
+    };
+});
+
+app.controller('qrcodeFormController', function ($scope, $rootScope) {
+
+    $scope.confirm = function() {
+        $rootScope.Pages.togglePin(function () {
+            $rootScope.Pages.go('main');
+        });
     };
 });

@@ -23,11 +23,11 @@ div.transBtn > div:nth-child(2){
 }
 
 .slider{
-	margin-left: 15%; 
+	margin-left: 10%; 
 }
 
 .slider input{
-	width: 250px;
+	width: 280px;
 }
 
 
@@ -37,4 +37,9 @@ div.transBtn > div:nth-child(2){
 
 .dt{
 	font-size: 130%;	
+}
+
+.amountTransfer{
+    font-size: 15pt;
+    font-weight: 500;
 }

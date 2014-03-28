@@ -1,6 +1,16 @@
 var app = angular.module('uofbank.balance', []);
 
-app.controller('balanceController', function ($scope, $rootScope) {
+app.controller('balanceController', function ($scope, $rootScope, DB) {
+
+    $scope.account = {};
+
+    $rootScope.$on('checkBalance.selectAccount', function (event, accountID) {
+        for (var i = 0; i < DB.data.accounts.length; i++) {
+            if (DB.data.accounts[i].id == accountID) {
+                $scope.account = DB.data.accounts[i];
+            }
+        }
+    });
 
     $scope.selectedMonth = '0';
     $scope.transactions = {

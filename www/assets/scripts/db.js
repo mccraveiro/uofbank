@@ -152,6 +152,81 @@ angular.module('uofbank.db', [])
                             ]
                         }
                     }
+                },
+                {
+                    id: 3,
+                    name: 'Visa',
+                    number: '3638 XXXX XXXX 9371',
+                    amount: 423.45,
+                    transactions: {
+                        '2013': {
+                            '12': [
+                                {
+                                    date: '21 December',
+                                    name: 'Tequila Jack',
+                                    amount: 35.00
+                                },
+                                {
+                                    date: '4 December',
+                                    name: 'Apple Store',
+                                    amount: 280.00
+                                }
+                            ]
+                        },
+                        '2014': {
+                            '1': [
+                                {
+                                    date: '19 January',
+                                    name: 'Mr. Sub',
+                                    amount: 14.12
+                                },
+                                {
+                                    date: '14 January',
+                                    name: 'B.R.A.Z.1.L',
+                                    amount: 23.13
+                                },
+                                {
+                                    date: '6 January',
+                                    name: 'Tim Hortons',
+                                    amount: 12.51
+                                }
+                            ],
+                            '2': [
+                                {
+                                    date: '28 February',
+                                    name: 'Noka',
+                                    amount: 21.42
+                                },
+                                {
+                                    date: '4 February',
+                                    name: 'Second Cup',
+                                    amount: 8.00
+                                },
+                                {
+                                    date: '2 February',
+                                    name: 'Second Cup',
+                                    amount: 7.51
+                                }
+                            ],
+                            '3': [
+                                {
+                                    date: '18 March',
+                                    name: 'McDonalds',
+                                    amount: 10.00
+                                },
+                                {
+                                    date: '11 March',
+                                    name: 'McDonalds',
+                                    amount: 11.27
+                                },
+                                {
+                                    date: '1 March',
+                                    name: 'Gap',
+                                    amount: 82.83
+                                }
+                            ]
+                        }
+                    }
                 }
             ],
             notifications: [

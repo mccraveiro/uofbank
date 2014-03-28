@@ -74,9 +74,6 @@ angular.module('uofbank.db', [])
                                     name: 'Walmart',
                                     amount: 72.38
                                 }
-                            ],
-                            '4': [
-
                             ]
                         }
                     }
@@ -89,21 +86,69 @@ angular.module('uofbank.db', [])
                     transactions: {
                         '2013': {
                             '12': [
-                                
+                                {
+                                    date: '23 December',
+                                    name: 'Madson Pub',
+                                    amount: 21.42
+                                },
+                                {
+                                    date: '5 December',
+                                    name: 'Home Depot',
+                                    amount: 78.63
+                                }
                             ]
                         },
                         '2014': {
                             '1': [
-
+                                {
+                                    date: '02 January',
+                                    name: 'Walmart',
+                                    amount: 221.42
+                                },
+                                {
+                                    date: '12 January',
+                                    name: 'Tim Hortons',
+                                    amount: 5.23
+                                },
+                                {
+                                    date: '20 January',
+                                    name: 'Subway',
+                                    amount: 13.42
+                                }
                             ],
                             '2': [
-
+                                {
+                                    date: '01 February',
+                                    name: 'Nosso Talho',
+                                    amount: 121.42
+                                },
+                                {
+                                    date: '09 February',
+                                    name: 'Second Cup',
+                                    amount: 3.23
+                                },
+                                {
+                                    date: '17 February',
+                                    name: 'Burger King',
+                                    amount: 13.42
+                                }
                             ],
                             '3': [
-
-                            ],
-                            '4': [
-
+                                {
+                                    date: '08 March',
+                                    name: 'Lobslaw',
+                                    amount: 271.42
+                                },
+                                {
+                                    date: '19 March',
+                                    name: 'Starbucks',
+                                    amount: 10.03
+                                },
+                                {
+                                    date: '27 March',
+                                    name: 'McDonalds',
+                                    amount: 6.03
+                                }
                             ]
                         }
                     }

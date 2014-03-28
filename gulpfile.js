@@ -10,6 +10,8 @@ gulp.task('styles', function () {
 
 gulp.task('cca', shell.task('cca run android'));
 
+gulp.task('clean', shell.task('rm www/assets/styles/*.css'));
+
 gulp.task('watch', function() {
 
     gulp.watch('./www/index.html', ['cca']);

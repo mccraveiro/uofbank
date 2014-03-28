@@ -74,6 +74,9 @@ angular.module('uofbank.db', [])
                                     name: 'Walmart',
                                     amount: 72.38
                                 }
+                            ],
+                            '4': [
+
                             ]
                         }
                     }
@@ -149,6 +152,9 @@ angular.module('uofbank.db', [])
                                     name: 'McDonalds',
                                     amount: 6.03
                                 }
+                            ],
+                            '4': [
+
                             ]
                         }
                     }
@@ -157,7 +163,7 @@ angular.module('uofbank.db', [])
                     id: 3,
                     name: 'Visa',
                     number: '3638 XXXX XXXX 9371',
-                    amount: 423.45,
+                    amount: -423.45,
                     transactions: {
                         '2013': {
                             '12': [
@@ -224,6 +230,9 @@ angular.module('uofbank.db', [])
                                     name: 'Gap',
                                     amount: 82.83
                                 }
+                            ],
+                            '4': [
+
                             ]
                         }
                     }

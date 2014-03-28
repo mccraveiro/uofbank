@@ -183,14 +183,14 @@ app.controller('billController', function ($scope, $rootScope, DB) {
     $scope.billForm = function() {
         $rootScope.Pages.go('billForm');
 
-        var x = document.getElementById("payee").value;
-        document.getElementById("pay").innerHTML=x;
-
-        var y = document.getElementById("accnumber").value;
-        document.getElementById("accnum").innerHTML=y;
-
-        var z = document.getElementById("amount").value;
-        document.getElementById("amnt").innerHTML=z;
+        // var x = document.getElementById("payee").value;
+        // document.getElementById("pay").innerHTML=x;
+        //
+        // var y = document.getElementById("accnumber").value;
+        // document.getElementById("accnum").innerHTML=y;
+        //
+        // var z = document.getElementById("amount").value;
+        // document.getElementById("amnt").innerHTML=z;
     };
 
 });

@@ -5,7 +5,8 @@ var app = angular.module('uofbank', [
     'uofbank.header',
     'uofbank.balance',
     'uofbank.bill',
-    'uofbank.billForm'
+    'uofbank.billForm',
+    'uofbank.transfer'
 ]);
 
 app.run(function ($rootScope, $location) {
@@ -134,21 +135,6 @@ app.controller('mainController', function ($scope, $rootScope, DB) {
         $rootScope.$broadcast('checkBalance.selectAccount', accountID);
 
         $rootScope.Pages.go('checkBalance');
-    };
-});
-
-
-app.controller('transferController', function ($scope, $rootScope) {
-
-    $scope.mainPage = function() {
-        $rootScope.Pages.go('main');
-    };
-
-    $scope.transferForm = function() {
-        $rootScope.Pages.go('transferForm');
-
-        var x = document.getElementById("val").value;
-        document.getElementById("value").innerHTML=x;
     };
 });
 

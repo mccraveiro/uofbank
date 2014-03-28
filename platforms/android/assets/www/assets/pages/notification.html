@@ -1,31 +1,39 @@
 <div class="panel main" ng-controller="notificationController">
     <ng-include src="'assets/pages/header.html'"></ng-include>
-    
-    <h1 class="title">Notification</h1>
+
+    <h1 class="subtitle">Notification</h1>
 
     <div class="card">
-        <p>
-            <span class="text">Payee: </span>
-            <input class="field" type="text" id="payee">
-        </p>
-        
-        <p>
-            <span class="text">Account Number: </span>
-            <input class="field" type="text" id="accnumber">
-        </p>
-        
+        <label>Payee:</label>
+        <select id="payee">
+            <option value="1">Bell</option>
+            <option value="2">Canada Revenue Agency</option>
+            <option value="3">City of Toronto</option>
+            <option value="4">Fido</option>
+            <option value="5">Rogers</option>
+            <option value="6">Toronto Hydro</option>
+            <option value="7">University of Toronto</option>
+            <option value="8">Walmart Canada</option>
+            <option value="9">Wind</option>
+        </select>
 
-        <p>
-            <span class="text">Data: </span>
-            <input class="field" type="text" id="amount">
-        </p>
+        <label>Account Number:</label>
+        <input type="number" id="accnumber">
+
+        <label>Amount:</label>
+        <input type="number" id="amount">
+
+        <label>Data:</label>
+        <input type="date" id="date">
     </div>
 
     <section class="nav">
         <div class="btn2" ng-click="back()">
+            <i class="fa fa-reply"></i>
             <h3>Back</h3>
         </div>
         <div class="btn2" ng-click="confirmNotification()">
+            <i class="fa fa-check-square-o"></i>
             <h3>Confirm</h3>
         </div>
     </section>

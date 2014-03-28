@@ -17,6 +17,14 @@ angular.module('uofbank.bill', [])
     };
 
     $scope.billForm = function () {
+
+        $rootScope.$broadcast('bill-confirmation', {
+            accountID: $scope.account.id,
+            payee: $scope.payee,
+            accountNumber: $scope.accountNumber,
+            amount: $scope.amount
+        });
+
         $rootScope.Pages.go('billForm');
     };
 
@@ -39,5 +47,8 @@ angular.module('uofbank.bill', [])
     function resetController() {
         $scope.isAccountSelected = false;
         $scope.account = DB.data.accounts[0];
+        $scope.payee = 1;
+        $scope.accountNumber = '';
+        $scope.amount = 0;
     }
 });

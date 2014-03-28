@@ -4,7 +4,8 @@ var app = angular.module('uofbank', [
     'uofbank.pin',
     'uofbank.header',
     'uofbank.balance',
-    'uofbank.bill'
+    'uofbank.bill',
+    'uofbank.billForm'
 ]);
 
 app.run(function ($rootScope, $location) {
@@ -163,20 +164,6 @@ app.controller('transferFormController', function ($scope, $rootScope) {
         });
     };
 });
-
-app.controller('billFormController', function ($scope, $rootScope) {
-
-    $scope.edit = function() {
-        $rootScope.Pages.go('bill');
-    };
-
-    $scope.pay = function() {
-        $rootScope.Pages.togglePin(function () {
-            $rootScope.Pages.go('main');
-        });
-    };
-});
-
 
 app.controller('notificationController', function ($scope, $rootScope) {
 

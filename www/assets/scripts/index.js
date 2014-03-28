@@ -32,7 +32,9 @@ app.run(function ($rootScope, $location) {
             checkBalance: false,
             bill: false,
             billForm: false,
-            notification: false
+            notification: false,
+            qrcode: false,
+            qrcodeForm: false
         };
 
         var pinVisible = false;
@@ -171,6 +173,10 @@ app.controller('billController', function ($scope, $rootScope) {
         $rootScope.Pages.go('notification');
     };
 
+    $scope.qrcode = function() {
+        $rootScope.Pages.go('qrcode');
+    };
+
     $scope.billForm = function() {
         $rootScope.Pages.go('billForm');
 
@@ -210,5 +216,27 @@ app.controller('notificationController', function ($scope, $rootScope) {
 
     $scope.back = function() {
         $rootScope.Pages.go('bill');
+    };
+});
+
+
+app.controller('qrcodeController', function ($scope, $rootScope) {
+    
+    $scope.qrcodeForm = function() {
+        $rootScope.Pages.go('qrcodeForm');
+    };
+    
+
+    $scope.back = function() {
+        $rootScope.Pages.go('bill');
+    };
+});
+
+app.controller('qrcodeFormController', function ($scope, $rootScope) {
+    
+    $scope.confirm = function() {
+        $rootScope.Pages.togglePin(function () {
+            $rootScope.Pages.go('main');
+        });
     };
 });

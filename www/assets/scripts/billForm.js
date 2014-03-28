@@ -11,6 +11,7 @@ angular.module('uofbank.billForm', [])
         $rootScope.Pages.togglePin(function () {
             resetController();
             $rootScope.Pages.go('main');
+            $rootScope.$broadcast('message', 'Bill paid successfully!');
         });
     };
 

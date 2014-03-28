@@ -202,3 +202,22 @@ app.controller('qrcodeFormController', function ($scope, $rootScope) {
         });
     };
 });
+
+app.controller('messageController', function ($scope, $rootScope) {
+
+    $scope.message = '';
+
+    $scope.clearMessage = function () {
+        $scope.message = '';
+    };
+
+    $rootScope.$on('message', function (event, text) {
+        $scope.message = text;
+
+        setTimeout(function () {
+            $scope.$apply(function () {
+                $scope.message = '';
+            });
+        }, 3500);
+    });
+});

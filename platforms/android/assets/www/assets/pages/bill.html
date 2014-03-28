@@ -11,10 +11,16 @@
 
     <h1 class="subtitle">Bills</h1>
 
-    <section class="card">
-        <h1>{{accounts[0].name}}</h1>
-        <h2>{{accounts[0].number}}</h2>
-        <span class="amount">$ {{accounts[0].amount}}</span>
+    <section class="card" ng-hide="isAccountSelected" ng-click="nextAccount()">
+        <h1>Choose an Account</h1>
+        <h2>Tip: keep clicking to change account</h2>
+        <span class="amount">&nbsp;</span>
+    </section>
+
+    <section class="card" ng-show="isAccountSelected" ng-click="nextAccount()">
+        <h1>{{account.name}}</h1>
+        <h2>{{account.number}}</h2>
+        <span class="amount">$ {{account.amount}}</span>
     </section>
 
     <div class="card">

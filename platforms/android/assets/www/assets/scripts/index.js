@@ -3,7 +3,8 @@ var app = angular.module('uofbank', [
     'uofbank.db',
     'uofbank.pin',
     'uofbank.header',
-    'uofbank.balance'
+    'uofbank.balance',
+    'uofbank.bill'
 ]);
 
 app.run(function ($rootScope, $location) {
@@ -162,39 +163,6 @@ app.controller('transferFormController', function ($scope, $rootScope) {
         });
     };
 });
-
-
-app.controller('billController', function ($scope, $rootScope, DB) {
-
-    $scope.accounts = DB.data.accounts;
-
-    $scope.mainPage = function() {
-        $rootScope.Pages.go('main');
-    };
-
-    $scope.notification = function() {
-        $rootScope.Pages.go('notification');
-    };
-
-    $scope.qrcode = function() {
-        $rootScope.Pages.go('qrcode');
-    };
-
-    $scope.billForm = function() {
-        $rootScope.Pages.go('billForm');
-
-        // var x = document.getElementById("payee").value;
-        // document.getElementById("pay").innerHTML=x;
-        //
-        // var y = document.getElementById("accnumber").value;
-        // document.getElementById("accnum").innerHTML=y;
-        //
-        // var z = document.getElementById("amount").value;
-        // document.getElementById("amnt").innerHTML=z;
-    };
-
-});
-
 
 app.controller('billFormController', function ($scope, $rootScope) {
 

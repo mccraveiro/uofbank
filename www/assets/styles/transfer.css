@@ -39,3 +39,7 @@ div.transBtn > div:nth-child(2){
 	font-size: 130%;	
 }
 
+.amountTransfer{
+    font-size: 15pt;
+    font-weight: 500;
+}

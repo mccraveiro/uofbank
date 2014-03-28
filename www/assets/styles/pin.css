@@ -51,7 +51,7 @@
 .pin .pin-keyboard-row .pin-keyboard-key.clicked {
   background-color: #666;
   color: #fff;
-  -webkit-animation-duration: 1s;
+  -webkit-animation-duration: 400ms;
   -webkit-animation-name: fadeout;
 }
 @-webkit-keyframes shake-horizontal {

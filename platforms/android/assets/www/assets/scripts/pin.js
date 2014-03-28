@@ -2,6 +2,8 @@ var app = angular.module('uofbank.pin', []);
 
 app.controller('pinController', function ($scope, $rootScope) {
 
+    var fxTimeout = 400;
+
     $scope.pin = '';
     $scope.shake = false;
     $scope.keyboard = {
@@ -15,7 +17,6 @@ app.controller('pinController', function ($scope, $rootScope) {
         '8': false,
         '9': false,
         '0': false,
-        'back': false,
         'cancel': false
     };
 
@@ -32,7 +33,7 @@ app.controller('pinController', function ($scope, $rootScope) {
             $scope.$apply(function () {
                 $scope.keyboard[number] = false;
             });
-        }, 1000);
+        }, fxTimeout);
 
         if ($scope.pin.length == 4) {
 
@@ -46,7 +47,7 @@ app.controller('pinController', function ($scope, $rootScope) {
                     $scope.$apply(function () {
                         $scope.shake = false;
                     });
-                }, 400);
+                }, fxTimeout);
             }
         }
     };
@@ -58,6 +59,7 @@ app.controller('pinController', function ($scope, $rootScope) {
     $scope.cancel = function () {
 
         if ($scope.pin.length === 0) {
+            $rootScope.Pages.togglePin();
             return;
         }
 
@@ -68,6 +70,6 @@ app.controller('pinController', function ($scope, $rootScope) {
             $scope.$apply(function () {
                 $scope.keyboard.cancel = false;
             });
-        }, 1000);
+        }, fxTimeout);
     };
 });

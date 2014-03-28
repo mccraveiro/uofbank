@@ -164,7 +164,9 @@ app.controller('transferFormController', function ($scope, $rootScope) {
 });
 
 
-app.controller('billController', function ($scope, $rootScope) {
+app.controller('billController', function ($scope, $rootScope, DB) {
+
+    $scope.accounts = DB.data.accounts;
 
     $scope.mainPage = function() {
         $rootScope.Pages.go('main');

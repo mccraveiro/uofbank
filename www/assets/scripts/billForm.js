@@ -9,6 +9,13 @@ angular.module('uofbank.billForm', [])
 
     $scope.pay = function() {
         $rootScope.Pages.togglePin(function () {
+
+            if (!transferMoney()) {
+                $rootScope.Pages.go('bill');
+                $rootScope.$broadcast('message', 'Insufficient balance');
+                return;
+            }
+
             resetController();
             $rootScope.Pages.go('main');
             $rootScope.$broadcast('message', 'Bill paid successfully!');
@@ -43,5 +50,27 @@ angular.module('uofbank.billForm', [])
         ];
 
         return payees[id - 1];
+    }
+
+    function transferMoney () {
+
+        var balance = DB.data.accounts[$scope.account.id].amount;
+
+        if (balance < $scope.amount) {
+            return false;
+        }
+
+        balance -= $scope.amount;
+        balance = Math.floor(balance * 100) / 100;
+
+        DB.data.accounts[$scope.account.id].amount = balance;
+
+        DB.data.accounts[$scope.account.id].transactions['2014']['4'].push({
+            date: 'Today',
+            name: $scope.payee,
+            amount: $scope.amount
+        });
+
+        return true;
     }
 });

@@ -64,7 +64,7 @@ h1 {
   font-size: 18pt;
   font-weight: 500;
 }
-.message {
+.overlay.message {
   height: 70px;
   width: 100%;
   z-index: 99999;

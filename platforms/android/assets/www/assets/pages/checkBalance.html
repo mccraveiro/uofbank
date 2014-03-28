@@ -10,18 +10,19 @@
 
     <section class="transactions">
         <select ng-model="selectedMonth">
-            <option value="0">Current Period</option>
-            <option value="1">February 2014</option>
-            <option value="2">January 2014</option>
-            <option value="3">December 2013</option>
+            <option value="2014-4">Current Period</option>
+            <option value="2014-3">March 2014</option>
+            <option value="2014-2">February 2014</option>
+            <option value="2014-1">January 2014</option>
+            <option value="2013-12">December 2013</option>
         </select>
 
-        <div class="month" ng-repeat="month in transactions" ng-show="$index == selectedMonth">
-            <div class="transaction" ng-repeat="transaction in month">
-                {{transaction.date}} - {{transaction.name}}
-                <span>$ {{transaction.amount}}</span>
-            </div>
+        <div class="transaction" ng-repeat="transaction in account.transactions[year][month]">
+            {{transaction.date}} - {{transaction.name}}
+            <span>$ {{transaction.amount}}</span>
         </div>
+
+        <span class="message" ng-hide="account.transactions[year][month].length">No transactions</span>
     </section>
 
     <section class="nav">

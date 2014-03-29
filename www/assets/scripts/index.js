@@ -5,9 +5,7 @@ var app = angular.module('uofbank', [
     'uofbank.header',
     'uofbank.balance',
     'uofbank.bill',
-    'uofbank.billForm',
-    'uofbank.transfer',
-    'uofbank.transferForm'
+    'uofbank.billForm'
 ]);
 
 app.run(function ($rootScope, $location) {
@@ -139,6 +137,34 @@ app.controller('mainController', function ($scope, $rootScope, DB) {
     };
 });
 
+
+app.controller('transferController', function ($scope, $rootScope) {
+
+    $scope.mainPage = function() {
+        $rootScope.Pages.go('main');
+    };
+
+    $scope.transferForm = function() {
+        $rootScope.Pages.go('transferForm');
+
+        var x = document.getElementById("val").value;
+        document.getElementById("value").innerHTML=x;
+    };
+});
+
+app.controller('transferFormController', function ($scope, $rootScope) {
+
+    $scope.transfer = function() {
+        $rootScope.Pages.go('transfer');
+    };
+
+    $scope.pay = function() {
+        $rootScope.Pages.togglePin(function () {
+            $rootScope.Pages.go('main');
+        });
+    };
+});
+
 app.controller('notificationController', function ($scope, $rootScope) {
 
     $scope.confirmNotification = function() {
@@ -169,7 +195,7 @@ app.controller('qrcodeFormController', function ($scope, $rootScope) {
     $scope.back = function() {
         $rootScope.Pages.go('bill');
     };
-    
+
     $scope.confirm = function() {
         $rootScope.Pages.togglePin(function () {
             $rootScope.Pages.go('main');

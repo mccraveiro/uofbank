@@ -3,20 +3,31 @@
     <ng-include src="'assets/pages/header.html'"></ng-include>
 
     <!-- Different Accounts -->
-    <section class="card">        
-        <h1>Checking</h1>
-        <h2>4567 XXXX XXXX 1234</h2>
-        <span class="amountTransfer">$ 123.45</span>
+    <section class="card" ng-hide="isAccountFromSelected" ng-click="nextAccountFrom()">
+        <h1>Choose an Account</h1>
+        <h2>Tip: keep clicking to change account</h2>
+        <span class="amountTransfer">&nbsp;</span>
     </section>
-    <section class="card">
-        <h1>Savings</h1>
-        <h2>4567 XXXX XXXX 4321</h2>
-        <span class="amountTransfer">$ 987.65</span>
+    <section class="card" ng-show="isAccountFromSelected" ng-click="nextAccountFrom()">
+        <h1>{{accountFrom.name}}</h1>
+        <h2>{{accountFrom.number}}</h2>
+        <span class="amountTransfer">$ {{accountFrom.amount}}</span>
     </section>
-
+    
+    <section class="card" ng-hide="isAccountToSelected" ng-click="nextAccountTo()">
+        <h1>Choose an Account</h1>
+        <h2>Tip: keep clicking to change account</h2>
+        <span class="amountTransfer">&nbsp;</span>
+    </section>
+    <section class="card" ng-show="isAccountToSelected" ng-click="nextAccountTo()">
+        <h1>{{accountTo.name}}</h1>
+        <h2>{{accountTo.number}}</h2>
+        <span class="amountTransfer">$ {{accountTo.amount}}</span>
+    </section>
+    
     <div class="slider">
-        <h3>Amount: <span id="val" ng-bind="time">0</span></h3>
-        <input type="range" ng-model="time" min="0" max="123.45" step="1.25">
+        <h3>Amount: <span id="val" ng-bind="amount">0</span></h3>
+        <input type="range" ng-model="amount" min="0" max="{{accountFrom.amount}}" step="0.25">
     </div>
 
     <section class="nav">

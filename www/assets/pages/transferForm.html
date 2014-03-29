@@ -4,18 +4,18 @@
 
     <section class="card">
         <p class="transferTitle">From</p>
-        <h1>Checking</h1>
-        <h2>4567 XXXX XXXX 1234</h2>
+        <h1>{{accountFrom.name}}</h1>
+        <h2>{{accountFrom.number}}</h2>
         <br>
         <p class="transferTitle">To</p>
-        <h1>Saving</h1>
-        <h2>4567 XXXX XXXX 4321</h2>
+        <h1>{{accountTo.name}}</h1>
+        <h2>{{accountTo.number}}</h2>
         <p class="transferTitle">Amount</p>
-        <span class="amount">$ 123.45</span>
+        <span class="amount">$ {{amount}}</span>
     </section>
 
     <section class="nav">
-        <div class="btn2" ng-click="transfer()">
+        <div class="btn2" ng-click="edit()">
             <i class="fa fa-pencil"></i>
             <h3>Edit</h3>
         </div>

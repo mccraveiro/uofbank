@@ -195,11 +195,7 @@ app.controller('qrcodeFormController', function ($scope, $rootScope) {
     $scope.back = function() {
         $rootScope.Pages.go('bill');
     };
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> upstream/master
     $scope.confirm = function() {
         $rootScope.Pages.togglePin(function () {
             $rootScope.Pages.go('main');

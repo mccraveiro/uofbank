@@ -13,6 +13,13 @@ angular.module('uofbank.bill', [])
     };
 
     $scope.qrcode = function () {
+        $rootScope.$broadcast('qrcode-confirmation', {
+            accountID: $scope.account.id,
+            payee: $scope.payee,
+            accountNumber: $scope.accountNumber,
+            amount: $scope.amount
+        });
+        
         $rootScope.Pages.go('qrcode');
     };
 

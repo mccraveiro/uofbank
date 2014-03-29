@@ -9,7 +9,12 @@ angular.module('uofbank.transfer', [])
     };
 
     $scope.transferForm = function () {
-
+        if ($scope.accountFrom.id == $scope.accountTo.id) {
+                $rootScope.Pages.go('transfer');
+                $rootScope.$broadcast('message', 'You should choose different accounts');
+                return;
+            }
+        
         $rootScope.$broadcast('transfer-confirmation', {
             accountIDFrom: $scope.accountFrom.id,
             accountIDTo: $scope.accountTo.id,

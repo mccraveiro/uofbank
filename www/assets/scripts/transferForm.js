@@ -12,7 +12,7 @@ angular.module('uofbank.transferForm', [])
 
             if (!transferMoney()) {
                 $rootScope.Pages.go('transfer');
-                $rootScope.$broadcast('message', 'Insufficient balance');
+                $rootScope.$broadcast('message', 'You should choose different accounts');
                 return;
             }
 
@@ -38,8 +38,12 @@ angular.module('uofbank.transferForm', [])
 
         var balance = DB.data.accounts[$scope.accountFrom.id].amount;
         var balanceTo = DB.data.accounts[$scope.accountTo.id].amount;
-
+        /*
         if (balance < $scope.amount) {
+            return false;
+        }
+        */
+        if ($scope.accountFrom.id == $scope.accountTo.id){
             return false;
         }
 

@@ -4,7 +4,7 @@ angular.module('uofbank.db', [])
         var data = {
             accounts: [
                 {
-                    id: 1,
+                    id: 0,
                     name: 'Checking',
                     number: '4567 XXXX XXXX 1234',
                     amount: 123.45,
@@ -82,7 +82,7 @@ angular.module('uofbank.db', [])
                     }
                 },
                 {
-                    id: 2,
+                    id: 1,
                     name: 'Savings',
                     number: '4567 XXXX XXXX 4321',
                     amount: 987.65,
@@ -160,7 +160,7 @@ angular.module('uofbank.db', [])
                     }
                 },
                 {
-                    id: 3,
+                    id: 2,
                     name: 'Visa',
                     number: '3638 XXXX XXXX 9371',
                     amount: -423.45,

@@ -3,7 +3,9 @@ var app = angular.module('uofbank', [
     'uofbank.db',
     'uofbank.pin',
     'uofbank.header',
-    'uofbank.balance'
+    'uofbank.balance',
+    'uofbank.bill',
+    'uofbank.billForm'
 ]);
 
 app.run(function ($rootScope, $location) {
@@ -163,53 +165,6 @@ app.controller('transferFormController', function ($scope, $rootScope) {
     };
 });
 
-
-app.controller('billController', function ($scope, $rootScope, DB) {
-
-    $scope.accounts = DB.data.accounts;
-
-    $scope.mainPage = function() {
-        $rootScope.Pages.go('main');
-    };
-
-    $scope.notification = function() {
-        $rootScope.Pages.go('notification');
-    };
-
-    $scope.qrcode = function() {
-        $rootScope.Pages.go('qrcode');
-    };
-
-    $scope.billForm = function() {
-        $rootScope.Pages.go('billForm');
-
-        // var x = document.getElementById("payee").value;
-        // document.getElementById("pay").innerHTML=x;
-        //
-        // var y = document.getElementById("accnumber").value;
-        // document.getElementById("accnum").innerHTML=y;
-        //
-        // var z = document.getElementById("amount").value;
-        // document.getElementById("amnt").innerHTML=z;
-    };
-
-});
-
-
-app.controller('billFormController', function ($scope, $rootScope) {
-
-    $scope.edit = function() {
-        $rootScope.Pages.go('bill');
-    };
-
-    $scope.pay = function() {
-        $rootScope.Pages.togglePin(function () {
-            $rootScope.Pages.go('main');
-        });
-    };
-});
-
-
 app.controller('notificationController', function ($scope, $rootScope) {
 
     $scope.confirmNotification = function() {
@@ -246,4 +201,23 @@ app.controller('qrcodeFormController', function ($scope, $rootScope) {
             $rootScope.Pages.go('main');
         });
     };
+});
+
+app.controller('messageController', function ($scope, $rootScope) {
+
+    $scope.message = '';
+
+    $scope.clearMessage = function () {
+        $scope.message = '';
+    };
+
+    $rootScope.$on('message', function (event, text) {
+        $scope.message = text;
+
+        setTimeout(function () {
+            $scope.$apply(function () {
+                $scope.message = '';
+            });
+        }, 3500);
+    });
 });

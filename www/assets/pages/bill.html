@@ -11,15 +11,21 @@
 
     <h1 class="subtitle">Bills</h1>
 
-    <section class="card">
-        <h1>{{accounts[0].name}}</h1>
-        <h2>{{accounts[0].number}}</h2>
-        <span class="amount">$ {{accounts[0].amount}}</span>
+    <section class="card" ng-hide="isAccountSelected" ng-click="nextAccount()">
+        <h1>Choose an Account</h1>
+        <h2>Tip: keep clicking to change account</h2>
+        <span class="amount">&nbsp;</span>
+    </section>
+
+    <section class="card" ng-show="isAccountSelected" ng-click="nextAccount()">
+        <h1>{{account.name}}</h1>
+        <h2>{{account.number}}</h2>
+        <span class="amount">$ {{account.amount}}</span>
     </section>
 
     <div class="card">
         <label>Payee:</label>
-        <select id="payee">
+        <select ng-model="payee">
             <option value="1">Bell</option>
             <option value="2">Canada Revenue Agency</option>
             <option value="3">City of Toronto</option>
@@ -32,10 +38,10 @@
         </select>
 
         <label>Account Number:</label>
-        <input type="number" id="accnumber">
+        <input type="number" ng-model="accountNumber">
 
         <label>Amount:</label>
-        <input type="text" id="amount">
+        <input type="number" ng-model="amount">
     </div>
 
     <section class="nav">
